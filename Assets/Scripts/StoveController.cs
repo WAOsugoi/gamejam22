@@ -7,11 +7,13 @@ public class StoveController : MonoBehaviour
 
     private bool isSpawnable;
     private GameObject spawner;
+    private GameObject logic;
 
     // Start is called before the first frame update
     void Start()
     {
         spawner = GameObject.Find("Spawner");
+        logic = GameObject.Find("GameLogicManager");
         isSpawnable = true;
     }
 
@@ -28,24 +30,28 @@ public class StoveController : MonoBehaviour
             switchOff();
         }
 
+        spawnCat();
 
     }
 
+    // Turn on fire and flip switch to ON position
     private void switchOn()
     {
-        Debug.Log("key q is pressed");
+        // add line to increase temperature
         GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 135);
     }
 
+    // Turn off fire and flip switch to OFF position
     private void switchOff()
     {
-        Debug.Log("key w is pressed");
+        // add line to decrease temperature
         GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 45);
     }
 
+    // Spawn cat if cat was judged and current pot is empty
     private void spawnCat()
     {
-        if (isSpawnable)
+        if (logic.GetComponent<GameLogicManager>().AllowedToSpawn() && GameObject.FindWithTag("CatObject") == null)
         {
             spawner.GetComponent<Spawner>().spawnObject();
             isSpawnable = false;
