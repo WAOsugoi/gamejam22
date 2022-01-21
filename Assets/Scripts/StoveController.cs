@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class StoveController : MonoBehaviour
 {
+
+    private bool isSpawnable;
+    private GameObject spawner;
+    private GameObject logic;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        spawner = GameObject.Find("Spawner");
+        logic = GameObject.Find("GameLogicManager");
+        isSpawnable = true;
     }
 
     // Update is called once per frame
@@ -22,19 +29,38 @@ public class StoveController : MonoBehaviour
         {
             switchOff();
         }
+
+        if (GameObject.FindWithTag("CatObject") == null)
+        {
+            isSpawnable = true;
+        }
+
+        spawnCat();
+
     }
 
-    void switchOn()
+    // Turn on fire and flip switch to ON position
+    private void switchOn()
     {
-        Debug.Log("key q is pressed");
+        // add line to increase temperature
         GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 135);
     }
 
-    void switchOff()
+    // Turn off fire and flip switch to OFF position
+    private void switchOff()
     {
-        Debug.Log("key w is pressed");
+        // add line to decrease temperature
         GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 45);
     }
 
+    // Spawn cat if cat was judged and current pot is empty
+    private void spawnCat()
+    {
+        if (logic.GetComponent<GameLogicManager>().AllowedToSpawn() && isSpawnable)
+        {
+            spawner.GetComponent<Spawner>().spawnObject();
+            isSpawnable = false;
+        }
+    }
 
 }
