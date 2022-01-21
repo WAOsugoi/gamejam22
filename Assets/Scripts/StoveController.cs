@@ -30,6 +30,11 @@ public class StoveController : MonoBehaviour
             switchOff();
         }
 
+        if (GameObject.FindWithTag("CatObject") == null)
+        {
+            isSpawnable = true;
+        }
+
         spawnCat();
 
     }
@@ -51,7 +56,7 @@ public class StoveController : MonoBehaviour
     // Spawn cat if cat was judged and current pot is empty
     private void spawnCat()
     {
-        if (logic.GetComponent<GameLogicManager>().AllowedToSpawn() && GameObject.FindWithTag("CatObject") == null)
+        if (logic.GetComponent<GameLogicManager>().AllowedToSpawn() && isSpawnable)
         {
             spawner.GetComponent<Spawner>().spawnObject();
             isSpawnable = false;
