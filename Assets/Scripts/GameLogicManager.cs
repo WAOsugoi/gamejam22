@@ -26,11 +26,11 @@ public class GameLogicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(numWrongJudgement >= 3)
+        if (numWrongJudgement >= 3)
         {
             // lose 
         }
-        else if(currentNumberOfCatsToBeJudged <= 0)
+        else if (currentNumberOfCatsToBeJudged <= 0)
         {
             // win 
             WinEvent();
@@ -39,7 +39,7 @@ public class GameLogicManager : MonoBehaviour
                 // perfect win?
             }
         }
-        
+
         //winScreen.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
     }
 
@@ -58,7 +58,7 @@ public class GameLogicManager : MonoBehaviour
     //Check if there are still cats left to be judged, if have decrease the cat count and return true to spawn cat.
     public bool AllowedToSpawn()
     {
-        if(numberOfCatsToBeJudged > 0)
+        if (currentNumberOfCatsToBeJudged > 0)
         {
             currentNumberOfCatsToBeJudged -= 1;
             return true;
@@ -89,7 +89,7 @@ public class GameLogicManager : MonoBehaviour
         numCorrectJudgement += 1;
     }
 
-    
 
-    
+
+
 }
