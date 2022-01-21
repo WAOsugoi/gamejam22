@@ -21,7 +21,7 @@ public class GameLogicManager : MonoBehaviour
     {
         currentNumberOfCatsToBeJudged = numberOfCatsToBeJudged;
         //Debug.Log(SceneManager.GetActiveScene().buildIndex);
-        LoseEvent();
+        //LoseEvent();
     }
 
     // Update is called once per frame
