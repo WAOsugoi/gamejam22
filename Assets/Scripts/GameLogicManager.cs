@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameLogicManager : MonoBehaviour
@@ -20,6 +20,7 @@ public class GameLogicManager : MonoBehaviour
     void Start()
     {
         currentNumberOfCatsToBeJudged = numberOfCatsToBeJudged;
+        //Debug.Log(SceneManager.GetActiveScene().buildIndex);
         LoseEvent();
     }
 
@@ -29,6 +30,7 @@ public class GameLogicManager : MonoBehaviour
         if (numWrongJudgement >= 3)
         {
             // lose 
+            LoseEvent();
         }
         else if(currentNumberOfCatsToBeJudged <= 0 && numCorrectJudgement + numWrongJudgement == numberOfCatsToBeJudged)
         {
