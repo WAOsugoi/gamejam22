@@ -30,7 +30,7 @@ public class GameLogicManager : MonoBehaviour
         {
             // lose 
         }
-        else if(currentNumberOfCatsToBeJudged <= 0)
+        else if(currentNumberOfCatsToBeJudged <= 0 && numCorrectJudgement + numWrongJudgement == numberOfCatsToBeJudged)
         {
             // win 
             WinEvent();
