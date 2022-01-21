@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
 
     public void spawnObject()
     {
-        Instantiate(objectToBeSpawned, transform.position, transform.rotation);
+        var obj = Instantiate(objectToBeSpawned, transform.position, transform.rotation);
+        obj.transform.parent = gameObject.transform.parent;
     }
 }
