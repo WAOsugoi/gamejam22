@@ -16,7 +16,7 @@ public class GameLogicManager : MonoBehaviour
 
     private int numWrongJudgement = 0;
     private int numCorrectJudgement = 0;
-    public int currentNumberOfCatsToBeJudged;
+    private int currentNumberOfCatsToBeJudged;
     private CatCounter currCatCounter;
 
     // Start is called before the first frame update
