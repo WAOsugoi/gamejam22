@@ -1,0 +1,198 @@
+{
+    "name": "InputMaster",
+    "maps": [
+        {
+            "name": "Stove1",
+            "id": "06868ed6-696c-4715-98f3-b3a49201c4e8",
+            "actions": [
+                {
+                    "name": "SwitchOn",
+                    "type": "Button",
+                    "id": "6c3e5d81-b591-4d45-86ac-803e75363d46",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchOff",
+                    "type": "Button",
+                    "id": "d583348a-47ec-4bc7-b443-20fa1bcbc8d8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "730446d4-aa99-4a21-b09c-125df382656c",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "218633d4-62ca-45d8-bc69-7c48a1eeae03",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchOff",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Stove2",
+            "id": "b866b10e-0ec1-4329-99e3-65905399ed50",
+            "actions": [
+                {
+                    "name": "SwitchOn",
+                    "type": "Button",
+                    "id": "fc141e41-35ba-4de1-a3de-1e79a0621577",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchOff",
+                    "type": "Button",
+                    "id": "d7895fe3-7cd8-454c-b4ce-827e07dde0c5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7ec6daa7-c29e-42f6-ab82-b6bcab1bebb3",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d326018f-eb69-4115-8bf6-942c160be2ba",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchOff",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Stove3",
+            "id": "d06b3611-3dd7-44e4-b3ed-a68f561f3ed9",
+            "actions": [
+                {
+                    "name": "SwitchOn",
+                    "type": "Button",
+                    "id": "5e38eb8a-d59b-4db0-84e4-dcfb5408865b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchOff",
+                    "type": "Button",
+                    "id": "2e12ce54-ff11-487f-8314-6cc483ac9815",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c7fd0615-c8d6-4ee9-95df-a16f39231407",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88fe44f9-c72a-49ab-a07f-126ed41e2d83",
+                    "path": "<Keyboard>/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchOff",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Stove4",
+            "id": "ddc5a6b5-69cc-4c60-84a0-bd5452ab8991",
+            "actions": [
+                {
+                    "name": "SwitchOn",
+                    "type": "Button",
+                    "id": "73294e3c-09e7-48df-abca-978990f09182",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchOff",
+                    "type": "Button",
+                    "id": "1849fe5b-4894-497e-b439-57d6b8065529",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "709126fe-f5cc-449c-8adb-4300ca89884b",
+                    "path": "<Keyboard>/u",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f46bded5-702c-4779-9254-3e181e4672ed",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchOff",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
