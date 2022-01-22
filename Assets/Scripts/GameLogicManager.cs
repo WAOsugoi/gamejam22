@@ -15,10 +15,11 @@ public class GameLogicManager : MonoBehaviour
     public GameObject winScreenPrefab;
     public GameObject loseScreenPrefab;
     public GameObject catCounterPrefab;
+    public CatCounter currCatCounter;
 
     private int numWrongJudgement = 0;
     private int numCorrectJudgement = 0;
-    private CatCounter currCatCounter;
+
     private bool endConMet = false;
 
     // Start is called before the first frame update

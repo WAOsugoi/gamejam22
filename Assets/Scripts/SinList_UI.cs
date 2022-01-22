@@ -40,8 +40,7 @@ public class SinList_UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        catsThisFrame = logicmanager.currentNumberOfCatsToBeJudged;
-        Debug.Log(catsThisFrame);
+        //Debug.Log(catsThisFrame);
 
         if ((isOut) && (transform.localPosition.x !< -693))
         {
@@ -65,5 +64,8 @@ public class SinList_UI : MonoBehaviour
     {
 
     }
+
+
+    
 
 }

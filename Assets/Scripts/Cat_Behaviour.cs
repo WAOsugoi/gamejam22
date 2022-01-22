@@ -6,28 +6,32 @@ using TMPro;
 public class Cat_Behaviour : MonoBehaviour
 {
 
-    enum temp_state {frozen, cold, neutral, hot, boiling}
+    public enum temp_state {frozen, cold, neutral, hot, boiling}
+
+    //disable later
+    private bool referredByList = true;
+
+    public double temperature;
+    public GameObject logicmanager_obj;
+    public GameObject sinlist_obj;
+    public temp_state temperature_state_flag;
+    public GameObject catbuttonprefab;
 
     public bool isBad = false;
     public bool isPoofed = false;
 
-    //disable later
-    bool referredByList = true;
-
-    public double temperature;
-    temp_state temperature_state_flag;
-
+    TMP_Text tmpro;
+    GameLogicManager logicmanager;
     CatSinGenerator catsingen;
     SpriteRenderer sprite;
+    GameObject canvas;
 
-    public GameObject logicmanager_obj;
-    GameLogicManager logicmanager;
+    SinList_UI sinlistui;
 
-    public GameObject sinlist_obj;
-    TMP_Text tmpro;
+
+    RectTransform rectTransform;
 
     List<string> generated_sins;
-
 
     //placeholder
     Color frozen_col = new Color (0.0f,0.25f,0.75f,1.0f); 
@@ -40,6 +44,7 @@ public class Cat_Behaviour : MonoBehaviour
     {
         catsingen = GetComponent<CatSinGenerator>();
         sprite = GetComponent<SpriteRenderer>();
+  
 
         logicmanager_obj = GameObject.Find("GameLogicManager");
         logicmanager = logicmanager_obj.GetComponent<GameLogicManager>();
@@ -47,23 +52,32 @@ public class Cat_Behaviour : MonoBehaviour
         sinlist_obj = GameObject.FindWithTag("SinList");
         tmpro = sinlist_obj.GetComponent<TMP_Text>();
 
+        rectTransform = transform.GetComponent<RectTransform>();  
+        sinlistui = sinlist_obj.GetComponent<SinList_UI>();
+
+        canvas = GameObject.Find("Canvas");
+
+
         generated_sins = catsingen.GeneratedSins;
-
-
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        //generates a random temperature
+        //TODO CHANGE IF LEVEL IS 5
         temperature = (double)Random.Range(30, 70);
+
     
         //delays
         Invoke("checkDisposition", 0.5f);
 
         Invoke("DrawListText", 0.5f);
- 
- 
+
+        //INSTANTIALIZES CATBUTTON
+        GameObject catbutton = Instantiate(catbuttonprefab);
+        catbutton.transform.SetParent(canvas.transform, false);
+        catbutton.GetComponent<RectTransform>().localPosition = this.GetComponent<Transform>().position;
+        //catbutton.transform.localScale = new Vector3(1, 1, 1);
     }
 
     void checkDisposition()
@@ -117,6 +131,7 @@ public class Cat_Behaviour : MonoBehaviour
             temperature_state_flag = temp_state.boiling;
             sprite.color = boil_col;
             isPoofed = true;
+            if (referredByList == true) {SwapList();}
         }
 
         
@@ -139,12 +154,12 @@ public class Cat_Behaviour : MonoBehaviour
         }
     }
 
-    public void SwapActiveList()
+    public void SwapList(GameObject selected)
     {
-        if(!referredByList) {referredByList = true;}
-        else {referredByList = false;}
-
+        //
+        DrawListText();
     }
+
 
 
 
