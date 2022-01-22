@@ -28,4 +28,9 @@ public class WinFunctions : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
+
+    public void BackToMain()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

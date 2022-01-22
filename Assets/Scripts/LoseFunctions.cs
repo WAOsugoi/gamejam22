@@ -18,4 +18,9 @@ public class LoseFunctions : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void BackToMain()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
