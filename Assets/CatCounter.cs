@@ -12,7 +12,7 @@ public class CatCounter : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     RectTransform ImageRectTransform;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class CatCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void UpdateTotalCatsLeftCount(int currCount, int totalCount)
