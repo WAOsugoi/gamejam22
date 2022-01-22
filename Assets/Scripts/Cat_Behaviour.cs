@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 //CatSinGenerator catsingen = GetComponent<CatSinGenerator>();
 
@@ -12,6 +13,7 @@ public class Cat_Behaviour : MonoBehaviour
 
     public bool isBad = false;
     public bool isPoofed = false;
+    public bool referredByList = false;
 
     public double temperature;
     temp_state temperature_state_flag;
@@ -21,6 +23,10 @@ public class Cat_Behaviour : MonoBehaviour
 
     public GameObject logicmanager_obj;
     GameLogicManager logicmanager;
+
+    public GameObject sinlist_obj;
+    TMP_Text tmpro;
+
 
     //placeholder
     Color frozen_col = new Color (0.0f,0.25f,0.75f,1.0f); 
@@ -36,6 +42,9 @@ public class Cat_Behaviour : MonoBehaviour
 
         logicmanager_obj = GameObject.Find("GameLogicManager");
         logicmanager = logicmanager_obj.GetComponent<GameLogicManager>();
+        
+        sinlist_obj = GameObject.FindWithTag("SinList");
+        tmpro = sinlist_obj.GetComponent<TextMeshProUGUI>();
 
 
     }
@@ -61,11 +70,14 @@ public class Cat_Behaviour : MonoBehaviour
         }
     }
 
+    //highlight the cat that the list is referring to.
+
 
     // Update is called once per frame
     void Update()
     {
         RefreshTemperature();
+        DrawListText();
     }
 
     void RefreshTemperature()
@@ -110,6 +122,15 @@ public class Cat_Behaviour : MonoBehaviour
            else if ((temperature_state_flag == temp_state.frozen) && (isBad == false)) {logicmanager.UpdateNumWrongJudgement();}
            else {logicmanager.UpdateNumCorrectJudgement();}
         }
+    }
+
+    void DrawListText()
+    {
+        if (referredByList == true)
+        {
+            tmpro.text = "test";
+        }
+
     }
 
 
