@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4827693022022575658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1649669514704027275}
+  - component: {fileID: 6140223253168120062}
+  m_Layer: 0
+  m_Name: CatSpriteManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1649669514704027275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4827693022022575658}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6140223253168120062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4827693022022575658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e9375808ffb4e40b868e7d9582f93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Latte:
+  - {fileID: 21300000, guid: 9fe6d6d32ba66824fa2834be913af97b, type: 3}
+  - {fileID: 21300000, guid: 963d6cb5a21885547bd325ddfd6de561, type: 3}
+  - {fileID: 21300000, guid: 352414ece998dc340b2fc3c4f2ad1f70, type: 3}
+  - {fileID: 21300000, guid: 4c1793dbd0220b84080ff95a3bd053f0, type: 3}
+  - {fileID: 21300000, guid: 8b9a6b3a5487b9d4ea86528b37692797, type: 3}
+  Vanila:
+  - {fileID: 21300000, guid: f20d880ffd4c41e4ea3db1bef059eaea, type: 3}
+  - {fileID: 21300000, guid: 93b72bef906cdb3499d9b55d771ca78f, type: 3}
+  - {fileID: 21300000, guid: f82045f80d401294e823b4e510809ad3, type: 3}
+  - {fileID: 21300000, guid: d7696fa8c77cf6d43a9f9c5d150c64a8, type: 3}
+  - {fileID: 21300000, guid: db09041b1efdc194097c5f47ea9a17b8, type: 3}
+  Matcha:
+  - {fileID: 21300000, guid: bee454b4b7e4e124f908d1e9eab3ee44, type: 3}
+  - {fileID: 21300000, guid: 69b8b758040610043bddcf4da14b94d0, type: 3}
+  - {fileID: 21300000, guid: b5e3196bd59c1ff40bddf29112f00475, type: 3}
+  - {fileID: 21300000, guid: 69dfda417a7d74240afa0ba01f25f3f5, type: 3}
+  - {fileID: 21300000, guid: d8c9175528505c34daa16c96d1c42643, type: 3}
