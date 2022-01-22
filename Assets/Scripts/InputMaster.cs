@@ -81,7 +81,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""id"": ""fc141e41-35ba-4de1-a3de-1e79a0621577"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -129,7 +129,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""id"": ""5e38eb8a-d59b-4db0-84e4-dcfb5408865b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -146,7 +146,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c7fd0615-c8d6-4ee9-95df-a16f39231407"",
-                    ""path"": ""<Keyboard>/t"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -157,7 +157,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""88fe44f9-c72a-49ab-a07f-126ed41e2d83"",
-                    ""path"": ""<Keyboard>/y"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -177,7 +177,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""id"": ""73294e3c-09e7-48df-abca-978990f09182"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -194,7 +194,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""709126fe-f5cc-449c-8adb-4300ca89884b"",
-                    ""path"": ""<Keyboard>/u"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -205,7 +205,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f46bded5-702c-4779-9254-3e181e4672ed"",
-                    ""path"": ""<Keyboard>/i"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
