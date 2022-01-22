@@ -4,18 +4,31 @@ using UnityEngine;
 
 public class CatSinGenerator : MonoBehaviour
 {
+        //COMPONENTS
+        Cat_Behaviour catBehaviour; 
+
+        //GOOD AND BAD SIN LISTS
         List<string> GoodSins = new List<string>();
         List<string> BadSins = new List<string>();
-        List<string> GeneratedSins = new List<string>();
+
+        //LIST TO GENERATE TO
+        public List<string> GeneratedSins = new List<string>();
+
+        //VARIABLES FOR CALCULATING GOOD AND BAD SINS
+        public int goodDisposition = 0;
+        public int badDisposition = 0;
+
+    void Awake()
+    {
+
+        catBehaviour =  GetComponent<Cat_Behaviour>();
+        InitializeSins();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        InitializeSins();
         GenerateSins();
-
-        //TODO: getcomponentt of the cat.
-
     }
 
     //loads sins from a txt file onto a list.
@@ -38,12 +51,26 @@ public class CatSinGenerator : MonoBehaviour
     //generatesins adds randomised strings from the good and bad sins onto a list.
     void GenerateSins()
     {
-        //TODO: create a random number generator, based on difficulty iteration number will change. 
-        //if number generated is even, load a BAD SIN onto. increment the bad sin counter;
-        //if number generated is odd, load a good sin onto the cat. increment the good sin counter.
-        //calculate the temperature disposition based on good sins. if good sins > %ge will be higher.
-        Debug.Log("WAKE UP LOSERS IT'S TIME TO SIN");
+        int numberOfSins = Random.Range(3, 6);
 
+        for (int i = 0; i < numberOfSins; i++)
+        {
+            int rng_value = Random.Range (0,100);
+
+            if (rng_value%2 == 1)
+            {
+                int listIndex = Random.Range(0, GoodSins.Count);
+                GeneratedSins.Add(GoodSins[listIndex]);
+                goodDisposition++;
+            }
+
+            else
+            {
+                int listIndex = Random.Range(0, BadSins.Count);
+                GeneratedSins.Add(BadSins[listIndex]);
+                badDisposition++;
+            }
+        }
     }
 
 
