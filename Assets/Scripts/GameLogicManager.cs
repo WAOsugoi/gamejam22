@@ -19,11 +19,14 @@ public class GameLogicManager : MonoBehaviour
     private int currentNumberOfCatsToBeJudged;
     private CatCounter currCatCounter;
 
+    private bool endConMet = false;
+
     // Start is called before the first frame update
     void Start()
     {
         currentNumberOfCatsToBeJudged = numberOfCatsToBeJudged;
         CreateCounter();
+        endConMet = false;
         //Debug.Log(SceneManager.GetActiveScene().buildIndex);
         //LoseEvent();
     }
@@ -58,21 +61,34 @@ public class GameLogicManager : MonoBehaviour
 
     private void WinEvent()
     {
-        GameObject winScreen = Instantiate(winScreenPrefab) as GameObject;
-        winScreen.transform.SetParent(currentCanvas.transform, false);
+        if(!endConMet)
+        {
+            GameObject winScreen = Instantiate(winScreenPrefab) as GameObject;
+            winScreen.transform.SetParent(currentCanvas.transform, false);
+            endConMet = true;
+        }
+        
     }
 
     private void LoseEvent()
     {
-        GameObject loseScreen = Instantiate(loseScreenPrefab) as GameObject;
-        loseScreen.transform.SetParent(currentCanvas.transform, false);
+        if (!endConMet)
+        {
+            GameObject loseScreen = Instantiate(loseScreenPrefab) as GameObject;
+            loseScreen.transform.SetParent(currentCanvas.transform, false);
+            endConMet = true;
+        }
     }
 
     private void CreateCounter()
     {
-        GameObject counter = Instantiate(catCounterPrefab) as GameObject;
-        counter.transform.SetParent(currentCanvas.transform, false);
-        currCatCounter = counter.GetComponent<CatCounter>();
+        if (!endConMet)
+        {
+            GameObject counter = Instantiate(catCounterPrefab) as GameObject;
+            counter.transform.SetParent(currentCanvas.transform, false);
+            currCatCounter = counter.GetComponent<CatCounter>();
+            endConMet = true;
+        }
     }
 
     //Check if there are still cats left to be judged, if have decrease the cat count and return true to spawn cat.
