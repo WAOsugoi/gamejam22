@@ -9,11 +9,17 @@ public class StoveController : MonoBehaviour
     private GameObject spawner;
     private GameObject logic;
 
+    private bool switchIsOn = false;
+
+    [SerializeField]
+    private double heatRate = 10;
+
     // Start is called before the first frame update
     void Start()
     {
         spawner = GameObject.Find("Spawner");
         logic = GameObject.Find("GameLogicManager");
+        //cat = GameObject.FindWithTag("CatObject");
         isSpawnable = true;
     }
 
@@ -35,6 +41,11 @@ public class StoveController : MonoBehaviour
             isSpawnable = true;
         }
 
+        if (switchIsOn)
+        {
+            incrTemp();
+        }
+
         spawnCat();
 
     }
@@ -42,14 +53,14 @@ public class StoveController : MonoBehaviour
     // Turn on fire and flip switch to ON position
     private void switchOn()
     {
-        // add line to increase temperature
+        switchIsOn = true;
         GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 135);
     }
 
     // Turn off fire and flip switch to OFF position
     private void switchOff()
     {
-        // add line to decrease temperature
+        switchIsOn = false;
         GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 45);
     }
 
@@ -63,4 +74,9 @@ public class StoveController : MonoBehaviour
         }
     }
 
+    private void incrTemp()
+    {
+        GameObject.FindWithTag("CatObject").GetComponent<Cat_Behaviour>().temperature += heatRate * Time.deltaTime;
+        Debug.Log(GameObject.FindWithTag("CatObject").GetComponent<Cat_Behaviour>().temperature);
+    }
 }
