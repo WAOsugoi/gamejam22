@@ -5,10 +5,10 @@ using UnityEngine;
 public class StoveController : MonoBehaviour
 {
 
-    private bool isSpawnable;
+    public bool isSpawnable;
     public Transform spawner;
     private GameObject logic;
-    private GameObject cat;
+    public GameObject cat;
     private SpriteRenderer sr;
 
     private bool switchIsOn = false;
@@ -30,22 +30,20 @@ public class StoveController : MonoBehaviour
     void Start()
     {
         sr.flipX = true;
-        //spawner = gameObject.transform.FindChild("Spawner");
         isSpawnable = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!cat)
+        if (cat)
         {
             spawnCat();
-            isSpawnable = false;
-        }
-
-        if (cat.GetComponent<Cat_Behaviour>().isPoofed)
-        {
-            CancelInvoke();
+            if (cat.GetComponent<Cat_Behaviour>().isPoofed)
+            {
+                CancelInvoke();
+                //Destroy(cat);
+            }
         }
     }
 
@@ -71,13 +69,13 @@ public class StoveController : MonoBehaviour
     // Spawn cat if there are still cats to judge and current pot is empty
     private void spawnCat()
     {
-        if (logic.GetComponent<GameLogicManager>().AllowedToSpawn() && isSpawnable)
-        {
-            cat = spawner.GetComponent<Spawner>().spawnObject();    // Spawn cat object
-            logic.GetComponent<GameLogicManager>().SpawnCatIfAllowed(); // Total cat count - 1
-            isSpawnable = false;
-            InvokeRepeating("decrTemp", coolingBuffer, 0.5f);
-        }
+        // if (logic.GetComponent<GameLogicManager>().AllowedToSpawn() && isSpawnable)
+        // {
+        //     cat = spawner.GetComponent<Spawner>().spawnObject();    // Spawn cat object
+        //     logic.GetComponent<GameLogicManager>().SpawnCatIfAllowed(); // Total cat count - 1
+        isSpawnable = false;
+        InvokeRepeating("decrTemp", coolingBuffer, 0.5f);
+        //}
     }
 
     private void incrTemp()

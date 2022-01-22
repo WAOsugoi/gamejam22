@@ -96,7 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aeed8027ad09eb47bda8590fab56057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSpawnable: 0
   spawner: {fileID: 6716121575370573889}
+  cat: {fileID: 0}
   heatRate: 1500
   coolRate: 1500
   coolingBuffer: 3

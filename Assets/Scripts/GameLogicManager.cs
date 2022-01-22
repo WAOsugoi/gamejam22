@@ -22,7 +22,7 @@ public class GameLogicManager : MonoBehaviour
     private bool endConMet = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         currentNumberOfCatsToBeJudged = numberOfCatsToBeJudged;
         CreateCounter();
@@ -39,7 +39,7 @@ public class GameLogicManager : MonoBehaviour
             // lose 
             LoseEvent();
         }
-        else if(currentNumberOfCatsToBeJudged <= 0 && numCorrectJudgement + numWrongJudgement == numberOfCatsToBeJudged)
+        else if (currentNumberOfCatsToBeJudged <= 0 && numCorrectJudgement + numWrongJudgement == numberOfCatsToBeJudged)
         {
             // win 
             WinEvent();
@@ -50,7 +50,7 @@ public class GameLogicManager : MonoBehaviour
         }
 
         //winScreen.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
-        if(currCatCounter != null)
+        if (currCatCounter != null)
         {
             //debug
             currCatCounter.UpdateChancesLeftCount(numberOfChance - numWrongJudgement, numberOfChance);
@@ -61,13 +61,13 @@ public class GameLogicManager : MonoBehaviour
 
     private void WinEvent()
     {
-        if(!endConMet)
+        if (!endConMet)
         {
             GameObject winScreen = Instantiate(winScreenPrefab) as GameObject;
             winScreen.transform.SetParent(currentCanvas.transform, false);
             endConMet = true;
         }
-        
+
     }
 
     private void LoseEvent()
