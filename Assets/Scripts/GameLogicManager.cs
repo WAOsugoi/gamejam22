@@ -16,7 +16,7 @@ public class GameLogicManager : MonoBehaviour
 
     private int numWrongJudgement = 0;
     private int numCorrectJudgement = 0;
-    private int currentNumberOfCatsToBeJudged;
+    public int currentNumberOfCatsToBeJudged;
     private CatCounter currCatCounter;
 
     // Start is called before the first frame update
@@ -49,8 +49,10 @@ public class GameLogicManager : MonoBehaviour
         //winScreen.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
         if(currCatCounter != null)
         {
+            //debug
             currCatCounter.UpdateChancesLeftCount(numberOfChance - numWrongJudgement, numberOfChance);
             currCatCounter.UpdateTotalCatsLeftCount(currentNumberOfCatsToBeJudged, numberOfCatsToBeJudged);
+            //actual counter
         }
     }
 
