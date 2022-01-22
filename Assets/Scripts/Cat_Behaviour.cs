@@ -16,15 +16,19 @@ public class Cat_Behaviour : MonoBehaviour
     temp_state temperature_state_flag;
 
     CatSinGenerator catsingen;
-    public GameObject logicmanager;
+
+
+    public GameObject logicmanager_obj;
+    GameLogicManager logicmanager;
 
 
 
     void Awake()
     {
         catsingen = GetComponent<CatSinGenerator>();
-        logicmanager = GameObject.Find("GameLogicManager");
-        
+        logicmanager_obj = GameObject.Find("GameLogicManager");
+        logicmanager = logicmanager_obj.GetComponent<GameLogicManager>();
+
     }
 
     // Start is called before the first frame update
