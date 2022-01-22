@@ -8,18 +8,22 @@ public class GameLogicManager : MonoBehaviour
 {
 
     public int numberOfCatsToBeJudged = 10; // default to 10
+    public int numberOfChance = 3; // default to 3
     public GameObject currentCanvas;
     public GameObject winScreenPrefab;
     public GameObject loseScreenPrefab;
+    public GameObject catCounterPrefab;
 
     private int numWrongJudgement = 0;
     private int numCorrectJudgement = 0;
     private int currentNumberOfCatsToBeJudged;
+    private CatCounter currCatCounter;
 
     // Start is called before the first frame update
     void Start()
     {
         currentNumberOfCatsToBeJudged = numberOfCatsToBeJudged;
+        CreateCounter();
         //Debug.Log(SceneManager.GetActiveScene().buildIndex);
         //LoseEvent();
     }
@@ -27,7 +31,7 @@ public class GameLogicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (numWrongJudgement >= 3)
+        if (numWrongJudgement >= numberOfChance)
         {
             // lose 
             LoseEvent();
@@ -43,6 +47,11 @@ public class GameLogicManager : MonoBehaviour
         }
 
         //winScreen.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
+        if(currCatCounter != null)
+        {
+            currCatCounter.UpdateChancesLeftCount(numberOfChance - numWrongJudgement, numberOfChance);
+            currCatCounter.UpdateTotalCatsLeftCount(currentNumberOfCatsToBeJudged, numberOfCatsToBeJudged);
+        }
     }
 
     private void WinEvent()
@@ -55,6 +64,13 @@ public class GameLogicManager : MonoBehaviour
     {
         GameObject loseScreen = Instantiate(loseScreenPrefab) as GameObject;
         loseScreen.transform.SetParent(currentCanvas.transform, false);
+    }
+
+    private void CreateCounter()
+    {
+        GameObject counter = Instantiate(catCounterPrefab) as GameObject;
+        counter.transform.SetParent(currentCanvas.transform, false);
+        currCatCounter = counter.GetComponent<CatCounter>();
     }
 
     //Check if there are still cats left to be judged, if have decrease the cat count and return true to spawn cat.
