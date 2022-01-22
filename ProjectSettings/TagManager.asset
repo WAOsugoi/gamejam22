@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CatObject
+  - SinList
   layers:
   - Default
   - TransparentFX
