@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e844f3facbb28f4458742a82745d1f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToBeSpawned: {fileID: 678528660342263715, guid: 0b12ac5eff494d8469a11b0572813eb1, type: 3}
+  objectToBeSpawned: {fileID: 5602216536105747660, guid: 2174568a98610ed4fadac188eca85cb5, type: 3}
 --- !u!1001 &9169419133983196472
 PrefabInstance:
   m_ObjectHideFlags: 0
