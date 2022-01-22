@@ -49,8 +49,10 @@ public class GameLogicManager : MonoBehaviour
         //winScreen.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
         if(currCatCounter != null)
         {
+            //debug
             currCatCounter.UpdateChancesLeftCount(numberOfChance - numWrongJudgement, numberOfChance);
             currCatCounter.UpdateTotalCatsLeftCount(currentNumberOfCatsToBeJudged, numberOfCatsToBeJudged);
+            //actual counter
         }
     }
 
