@@ -34,11 +34,7 @@ public class Cat_Behaviour : MonoBehaviour
     List<string> generated_sins;
 
     //placeholder
-    Color frozen_col = new Color (0.0f,0.25f,0.75f,1.0f); 
-    Color cold_col = new Color  (0.0f,0.75f,0.75f,1.0f);
-    Color neutral_col = new Color (0.0f, 0.85f, 0.25f,1.0f);
-    Color hot_col = new Color(0.5f, 0.5f,0.0f,1.0f);
-    Color boil_col = new Color(0.75f, 0.75f,0.0f,1.0f);
+
 
     void Awake()
     {
@@ -64,7 +60,7 @@ public class Cat_Behaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //TODO CHANGE IF LEVEL IS 5
+        
         temperature = (double)Random.Range(30, 70);
 
     
@@ -104,34 +100,28 @@ public class Cat_Behaviour : MonoBehaviour
         if (temperature < 0.0) 
         {
             temperature_state_flag = temp_state.frozen;
-            sprite.color = frozen_col;
             isPoofed = true;
         }
 
         if ((temperature > 0.0) && (temperature <= 33.3)) 
         {
             temperature_state_flag = temp_state.cold;
-            sprite.color = cold_col;
         }
 
         if ((temperature > 33.3) && (temperature <= 66.6)) 
         {
             temperature_state_flag = temp_state.neutral;
-            sprite.color = neutral_col;
         }
 
         if ((temperature > 66.6) && (temperature <= 99.9))
         {
              temperature_state_flag = temp_state.hot;
-             sprite.color = hot_col;
         }
 
         if (temperature > 100.0) 
         {
             temperature_state_flag = temp_state.boiling;
-            sprite.color = boil_col;
             isPoofed = true;
-            //if (referredByList == true) {SwapList();}
         }
 
         
