@@ -131,7 +131,7 @@ public class Cat_Behaviour : MonoBehaviour
             temperature_state_flag = temp_state.boiling;
             sprite.color = boil_col;
             isPoofed = true;
-            if (referredByList == true) {SwapList();}
+            //if (referredByList == true) {SwapList();}
         }
 
         
