@@ -9,6 +9,7 @@ public class StoveController : MonoBehaviour
     public Transform spawner;
     private GameObject logic;
     private GameObject cat;
+    private SpriteRenderer sr;
 
     private bool switchIsOn = false;
 
@@ -19,11 +20,17 @@ public class StoveController : MonoBehaviour
     [SerializeField]
     private float coolingBuffer = 3;
 
+    private void Awake()
+    {
+        sr = GetComponent<SpriteRenderer>();
+        logic = GameObject.Find("GameLogicManager");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        sr.flipX = true;
         //spawner = gameObject.transform.FindChild("Spawner");
-        logic = GameObject.Find("GameLogicManager");
         isSpawnable = true;
     }
 
@@ -47,7 +54,7 @@ public class StoveController : MonoBehaviour
     {
         CancelInvoke();
         switchIsOn = true;
-        GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 135);
+        sr.flipX = false;
         InvokeRepeating("incrTemp", 0, 0.5f);
 
     }
@@ -57,7 +64,7 @@ public class StoveController : MonoBehaviour
     {
         CancelInvoke();
         switchIsOn = false;
-        GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 45);
+        sr.flipX = true;
         InvokeRepeating("decrTemp", 0, 0.5f);
     }
 
