@@ -33,7 +33,7 @@ public class CatCounter : MonoBehaviour
         float targetAngle = Mathf.Clamp(((float)currCount / (float)totalCount) * 360f, 0f, 360f);
         float angle = Mathf.SmoothDampAngle(ImageRectTransform.eulerAngles.z, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
         ImageRectTransform.rotation = (Quaternion.Euler(0, 0, angle));
-        Debug.Log(angle);
+        //Debug.Log(angle);
     }
 
     public void UpdateChancesLeftCount(int currChanceLeft, int totalChanceLeft)

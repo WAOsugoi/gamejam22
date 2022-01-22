@@ -7,45 +7,47 @@ public class SinList_UI : MonoBehaviour
 
      RectTransform transform;
      [SerializeField] float ListPullLength = 0.0f;
-     [SerializeField] float slidespeed = 2.0f;
+     [SerializeField] float slidespeed = 150.0f;
 
      bool isOut = false;
+
+
+    private Vector3 buttonVelocity = Vector3.zero;
+
+        Vector3 original_pos;
+        Vector3 newPos;
+
 
     void Awake()
     {
         transform = GetComponent<RectTransform>();
+
     }
 
     // Start is called before the first frame update
     void Start()
     { 
+         original_pos = transform.localPosition;
+         newPos = Vector3.right * ListPullLength;
     }
 
-    // // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
+    // Update is called once per frame
+    void Update()
+    {
+        if ((isOut) && (transform.localPosition.x !< -693))
+        {
+            transform.localPosition += Vector3.right * Time.deltaTime *slidespeed;
+        }
+
+        if ((!isOut) && (transform.localPosition.x !> -1070))
+        {
+            transform.localPosition += Vector3.left * Time.deltaTime * slidespeed;
+        }
+    }
 
     public void pullOutList()
     {
-        if (!isOut) 
-        {
-            Vector3 destination = transform.localPosition + (Vector3.right * ListPullLength);
-            while(transform.localPosition != destination)
-            {
-            transform.localPosition += Vector3.right * slidespeed * Time.deltaTime;
-            }
- 
-            isOut = (!isOut);
-        }
-
-        else
-        {
-            transform.localPosition += Vector3.left * ListPullLength;
-            isOut = (!isOut);
-        }
-
+        isOut = (!isOut);
     }
 
 }
