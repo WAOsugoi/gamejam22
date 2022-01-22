@@ -80,6 +80,19 @@ public class GameLogicManager : MonoBehaviour
     {
         if (currentNumberOfCatsToBeJudged > 0)
         {
+            //currentNumberOfCatsToBeJudged -= 1;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool SpawnCatIfAllowed()
+    {
+        if (currentNumberOfCatsToBeJudged > 0)
+        {
             currentNumberOfCatsToBeJudged -= 1;
             return true;
         }
