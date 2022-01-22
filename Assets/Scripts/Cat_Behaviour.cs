@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-//CatSinGenerator catsingen = GetComponent<CatSinGenerator>();
-
-
 public class Cat_Behaviour : MonoBehaviour
 {
 
@@ -13,7 +10,9 @@ public class Cat_Behaviour : MonoBehaviour
 
     public bool isBad = false;
     public bool isPoofed = false;
-    public bool referredByList = false;
+
+    //disable later
+    bool referredByList = true;
 
     public double temperature;
     temp_state temperature_state_flag;
@@ -26,6 +25,8 @@ public class Cat_Behaviour : MonoBehaviour
 
     public GameObject sinlist_obj;
     TMP_Text tmpro;
+
+    List<string> generated_sins;
 
 
     //placeholder
@@ -44,7 +45,9 @@ public class Cat_Behaviour : MonoBehaviour
         logicmanager = logicmanager_obj.GetComponent<GameLogicManager>();
         
         sinlist_obj = GameObject.FindWithTag("SinList");
-        tmpro = sinlist_obj.GetComponent<TextMeshProUGUI>();
+        tmpro = sinlist_obj.GetComponent<TMP_Text>();
+
+        generated_sins = catsingen.GeneratedSins;
 
 
     }
@@ -57,6 +60,8 @@ public class Cat_Behaviour : MonoBehaviour
     
         //delays
         Invoke("checkDisposition", 0.5f);
+
+        Invoke("DrawListText", 0.5f);
  
  
     }
@@ -65,7 +70,7 @@ public class Cat_Behaviour : MonoBehaviour
     {
         if (catsingen.goodDisposition < catsingen.badDisposition)
         {
-            Debug.Log("called");
+            //Debug.Log("called");
             isBad = true;
         }
     }
@@ -77,7 +82,6 @@ public class Cat_Behaviour : MonoBehaviour
     void Update()
     {
         RefreshTemperature();
-        DrawListText();
     }
 
     void RefreshTemperature()
@@ -127,11 +131,22 @@ public class Cat_Behaviour : MonoBehaviour
     void DrawListText()
     {
         if (referredByList == true)
-        {
-            tmpro.text = "test";
+        {   
+            foreach (string item in generated_sins)
+            {
+                tmpro.text += ("-" + item + "\n");
+            }
         }
+    }
+
+    public void SwapActiveList()
+    {
+        if(!referredByList) {referredByList = true;}
+        else {referredByList = false;}
 
     }
+
+
 
 
 

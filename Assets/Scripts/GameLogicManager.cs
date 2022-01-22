@@ -9,16 +9,16 @@ public class GameLogicManager : MonoBehaviour
 
     public int numberOfCatsToBeJudged = 10; // default to 10
     public int numberOfChance = 3; // default to 3
+    public int currentNumberOfCatsToBeJudged;
+
     public GameObject currentCanvas;
     public GameObject winScreenPrefab;
     public GameObject loseScreenPrefab;
     public GameObject catCounterPrefab;
 
-    public int numWrongJudgement = 0;
+    private int numWrongJudgement = 0;
     private int numCorrectJudgement = 0;
-    public int currentNumberOfCatsToBeJudged;
     private CatCounter currCatCounter;
-
     private bool endConMet = false;
 
     // Start is called before the first frame update
