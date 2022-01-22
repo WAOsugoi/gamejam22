@@ -264,14 +264,9 @@ PrefabInstance:
     - target: {fileID: 7753697284280699781, guid: 51664675bb75b7249bf197042c2efe03, type: 3}
       propertyPath: currentCanvas
       value: 
-      objectReference: {fileID: 920906748}
+      objectReference: {fileID: 1703954895}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51664675bb75b7249bf197042c2efe03, type: 3}
---- !u!1 &920906748 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4804499987415758800, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-  m_PrefabInstance: {fileID: 4804499988328160300}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1082832301
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,9 +340,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4804499988328160300
+--- !u!1 &1703954895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4804499987415758800, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
+  m_PrefabInstance: {fileID: 1974699182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1974699182
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -364,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4804499987415756844, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4804499987415756844, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -440,12 +440,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4804499987415758800, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
       propertyPath: m_Name
-      value: OrderPile
+      value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4804499987415758803, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-      propertyPath: m_Camera
+    - target: {fileID: 4804499987966881900, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804499987966881900, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
       value: 
-      objectReference: {fileID: 519420031}
+      objectReference: {fileID: 21300000, guid: 16065bdb7465e904ea4ca81b827651c1, type: 3}
+    - target: {fileID: 4804499987966881900, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 16065bdb7465e904ea4ca81b827651c1, type: 3}
+    - target: {fileID: 4804499987966881900, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 16065bdb7465e904ea4ca81b827651c1, type: 3}
+    - target: {fileID: 4804499987966881900, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 16065bdb7465e904ea4ca81b827651c1, type: 3}
+    - target: {fileID: 4804499988318485405, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 56154b613fb9ea54c87be3f4c0fcb6be, type: 2}
+    - target: {fileID: 4804499988318485405, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5279849612689591661, guid: 56154b613fb9ea54c87be3f4c0fcb6be, type: 2}
+    - target: {fileID: 7870772881499382448, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 56154b613fb9ea54c87be3f4c0fcb6be, type: 2}
+    - target: {fileID: 7870772881499382448, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5279849612689591661, guid: 56154b613fb9ea54c87be3f4c0fcb6be, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
 --- !u!1001 &6716121575333981562
