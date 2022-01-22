@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-//CatSinGenerator catsingen = GetComponent<CatSinGenerator>();
-
+using TMPro;
 
 public class Cat_Behaviour : MonoBehaviour
 {
@@ -13,6 +11,9 @@ public class Cat_Behaviour : MonoBehaviour
     public bool isBad = false;
     public bool isPoofed = false;
 
+    //disable later
+    bool referredByList = true;
+
     public double temperature;
     temp_state temperature_state_flag;
 
@@ -21,6 +22,12 @@ public class Cat_Behaviour : MonoBehaviour
 
     public GameObject logicmanager_obj;
     GameLogicManager logicmanager;
+
+    public GameObject sinlist_obj;
+    TMP_Text tmpro;
+
+    List<string> generated_sins;
+
 
     //placeholder
     Color frozen_col = new Color (0.0f,0.25f,0.75f,1.0f); 
@@ -36,6 +43,11 @@ public class Cat_Behaviour : MonoBehaviour
 
         logicmanager_obj = GameObject.Find("GameLogicManager");
         logicmanager = logicmanager_obj.GetComponent<GameLogicManager>();
+        
+        sinlist_obj = GameObject.FindWithTag("SinList");
+        tmpro = sinlist_obj.GetComponent<TMP_Text>();
+
+        generated_sins = catsingen.GeneratedSins;
 
 
     }
@@ -48,6 +60,8 @@ public class Cat_Behaviour : MonoBehaviour
     
         //delays
         Invoke("checkDisposition", 0.5f);
+
+        Invoke("DrawListText", 0.5f);
  
  
     }
@@ -56,10 +70,12 @@ public class Cat_Behaviour : MonoBehaviour
     {
         if (catsingen.goodDisposition < catsingen.badDisposition)
         {
-            Debug.Log("called");
+            //Debug.Log("called");
             isBad = true;
         }
     }
+
+    //highlight the cat that the list is referring to.
 
 
     // Update is called once per frame
@@ -111,6 +127,26 @@ public class Cat_Behaviour : MonoBehaviour
            else {logicmanager.UpdateNumCorrectJudgement();}
         }
     }
+
+    void DrawListText()
+    {
+        if (referredByList == true)
+        {   
+            foreach (string item in generated_sins)
+            {
+                tmpro.text += ("-" + item + "\n");
+            }
+        }
+    }
+
+    public void SwapActiveList()
+    {
+        if(!referredByList) {referredByList = true;}
+        else {referredByList = false;}
+
+    }
+
+
 
 
 
