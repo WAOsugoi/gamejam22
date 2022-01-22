@@ -156,7 +156,6 @@ public class Cat_Behaviour : MonoBehaviour
 
     public void SwapList(GameObject selected)
     {
-        //
         DrawListText();
     }
 
