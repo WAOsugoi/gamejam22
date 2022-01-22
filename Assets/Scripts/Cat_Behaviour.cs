@@ -45,9 +45,17 @@ public class Cat_Behaviour : MonoBehaviour
         //generates a random temperature
         temperature = (double)Random.Range(30, 70);
     
-        //checks if cat is good or bad       
+        //delays
+        Invoke("checkDisposition", 0.5f);
+ 
+ 
+    }
+
+    void checkDisposition()
+    {
         if (catsingen.goodDisposition < catsingen.badDisposition)
         {
+            Debug.Log("called");
             isBad = true;
         }
     }
