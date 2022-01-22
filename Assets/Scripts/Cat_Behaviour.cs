@@ -11,6 +11,7 @@ public class Cat_Behaviour : MonoBehaviour
     enum temp_state {frozen, cold, neutral, hot, boiling}
 
     public bool isBad = false;
+    public bool isPoofed = false;
 
     public double temperature;
     temp_state temperature_state_flag;
@@ -70,10 +71,11 @@ public class Cat_Behaviour : MonoBehaviour
     void RefreshTemperature()
     {
         //checks for cat current temperature
-        if (temperature == 0.0) 
+        if (temperature < 0.0) 
         {
             temperature_state_flag = temp_state.frozen;
             sprite.color = frozen_col;
+            isPoofed = true;
         }
 
         if ((temperature > 0.0) && (temperature <= 33.3)) 
@@ -94,12 +96,14 @@ public class Cat_Behaviour : MonoBehaviour
              sprite.color = hot_col;
         }
 
-        if (temperature == 100.0) 
+        if (temperature > 100.0) 
         {
             temperature_state_flag = temp_state.boiling;
             sprite.color = boil_col;
+            isPoofed = true;
         }
 
+        
         if ((temperature_state_flag == temp_state.boiling) || (temperature_state_flag == temp_state.frozen))
         {
            if ((temperature_state_flag == temp_state.boiling) && (isBad == true)) {logicmanager.UpdateNumWrongJudgement();}
