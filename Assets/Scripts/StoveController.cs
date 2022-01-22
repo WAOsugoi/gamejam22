@@ -6,7 +6,7 @@ public class StoveController : MonoBehaviour
 {
 
     private bool isSpawnable;
-    private GameObject spawner;
+    public Transform spawner;
     private GameObject logic;
     private GameObject cat;
 
@@ -22,7 +22,7 @@ public class StoveController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawner = GameObject.Find("Spawner");
+        //spawner = gameObject.transform.FindChild("Spawner");
         logic = GameObject.Find("GameLogicManager");
         isSpawnable = true;
     }
@@ -30,12 +30,11 @@ public class StoveController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.FindWithTag("CatObject") == null)
+        if (!cat)
         {
-            isSpawnable = true;
+            spawnCat();
+            isSpawnable = false;
         }
-
-        spawnCat();
 
         if (cat.GetComponent<Cat_Behaviour>().isPoofed)
         {
@@ -49,7 +48,7 @@ public class StoveController : MonoBehaviour
         CancelInvoke();
         switchIsOn = true;
         GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 135);
-        InvokeRepeating("incrTemp", 0, 1);
+        InvokeRepeating("incrTemp", 0, 0.5f);
 
     }
 
@@ -62,13 +61,13 @@ public class StoveController : MonoBehaviour
         InvokeRepeating("decrTemp", 0, 0.5f);
     }
 
-    // Spawn cat if cat was judged and current pot is empty
+    // Spawn cat if there are still cats to judge and current pot is empty
     private void spawnCat()
     {
         if (logic.GetComponent<GameLogicManager>().AllowedToSpawn() && isSpawnable)
         {
-            spawner.GetComponent<Spawner>().spawnObject();
-            cat = GameObject.FindWithTag("CatObject");
+            cat = spawner.GetComponent<Spawner>().spawnObject();    // Spawn cat object
+            logic.GetComponent<GameLogicManager>().SpawnCatIfAllowed(); // Total cat count - 1
             isSpawnable = false;
             InvokeRepeating("decrTemp", coolingBuffer, 0.5f);
         }
@@ -77,13 +76,13 @@ public class StoveController : MonoBehaviour
     private void incrTemp()
     {
         cat.GetComponent<Cat_Behaviour>().temperature += heatRate * Time.deltaTime;
-        Debug.Log(cat.GetComponent<Cat_Behaviour>().temperature);
+        Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
     }
 
     private void decrTemp()
     {
         cat.GetComponent<Cat_Behaviour>().temperature -= coolRate * Time.deltaTime;
-        Debug.Log(cat.GetComponent<Cat_Behaviour>().temperature);
+        Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
     }
 
 

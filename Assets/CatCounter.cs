@@ -12,7 +12,7 @@ public class CatCounter : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     RectTransform ImageRectTransform;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class CatCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void UpdateTotalCatsLeftCount(int currCount, int totalCount)
@@ -33,7 +33,7 @@ public class CatCounter : MonoBehaviour
         float targetAngle = Mathf.Clamp(((float)currCount / (float)totalCount) * 360f, 0f, 360f);
         float angle = Mathf.SmoothDampAngle(ImageRectTransform.eulerAngles.z, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
         ImageRectTransform.rotation = (Quaternion.Euler(0, 0, angle));
-        Debug.Log(angle);
+        //Debug.Log(angle);
     }
 
     public void UpdateChancesLeftCount(int currChanceLeft, int totalChanceLeft)
