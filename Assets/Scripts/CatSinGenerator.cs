@@ -40,36 +40,55 @@ public class CatSinGenerator : MonoBehaviour
         GoodSins.Add("starred in a viral tiktok video");
         GoodSins.Add("immortalized in an internet meme");
         GoodSins.Add("did a good mlem");
+        GoodSins.Add("Did not eat the christmas turkey");
+        GoodSins.Add("Did not throw up a hairball today");
 
         BadSins.Add("bit the owner's ass");
         BadSins.Add("toppled mug");
         BadSins.Add("blew up the eiffel tower");
         BadSins.Add("broke the brroklyn bridge");
         BadSins.Add("crashed digipen servers");
+        BadSins.Add("Started an underground catnip ring");
+        BadSins.Add("TOOK THE NEIGHBOURS FISH");
     }
 
     //generatesins adds randomised strings from the good and bad sins onto a list.
     void GenerateSins()
     {
-        int numberOfSins = Random.Range(3, 6);
+        int numberOfSins = Random.Range(3, 7);
+        if (numberOfSins%2 == 0) {numberOfSins++;}        //ensures that odd number is generated
+        
+        //testcode
+        Debug.Log(numberOfSins);
 
         for (int i = 0; i < numberOfSins; i++)
         {
-            int rng_value = Random.Range (0,100);
+            int rng_value = Random.Range (0,100);       //generates a number from 0-100
+            
 
             if (rng_value%2 == 1)
             {
                 int listIndex = Random.Range(0, GoodSins.Count);
                 GeneratedSins.Add(GoodSins[listIndex]);
+                GoodSins.RemoveAt(listIndex);
                 goodDisposition++;
+
             }
 
             else
             {
                 int listIndex = Random.Range(0, BadSins.Count);
                 GeneratedSins.Add(BadSins[listIndex]);
+                BadSins.RemoveAt(listIndex);
                 badDisposition++;
             }
+
+        }
+
+        //debug code
+        for (int i = 0; i < GeneratedSins.Count; i++)
+        {
+            Debug.Log(GeneratedSins[i]);
         }
     }
 
