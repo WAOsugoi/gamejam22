@@ -110,13 +110,13 @@ public class StoveController : MonoBehaviour
     private void incrTemp()
     {
         cat.GetComponent<Cat_Behaviour>().temperature += heatRate * Time.deltaTime;
-        Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
+        //Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
     }
 
     private void decrTemp()
     {
         cat.GetComponent<Cat_Behaviour>().temperature -= coolRate * Time.deltaTime;
-        Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
+        //Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
     }
 
 
