@@ -14,9 +14,9 @@ public class StoveController : MonoBehaviour
     private bool switchIsOn = false;
 
     [SerializeField]
-    private double heatRate = 500; //default
+    private double heatRate = 10; //default
     [SerializeField]
-    private double coolRate = 500; //default
+    private double coolRate = 10; //default
     [SerializeField]
     private float coolingBuffer = 3;
 
@@ -53,7 +53,7 @@ public class StoveController : MonoBehaviour
         CancelInvoke();
         switchIsOn = true;
         sr.flipX = false;
-        InvokeRepeating("incrTemp", 0, 0.5f);
+        InvokeRepeating("incrTemp", 0, 1);
 
     }
 
@@ -63,14 +63,14 @@ public class StoveController : MonoBehaviour
         CancelInvoke();
         switchIsOn = false;
         sr.flipX = true;
-        InvokeRepeating("decrTemp", 0, 0.5f);
+        InvokeRepeating("decrTemp", 0, 1);
     }
 
     // Spawn cat if there are still cats to judge and current pot is empty
     private void spawnCat()
     {
         isSpawnable = false;
-        InvokeRepeating("decrTemp", coolingBuffer, 0.5f);
+        InvokeRepeating("decrTemp", coolingBuffer, 1);
     }
 
     private void incrTemp()
