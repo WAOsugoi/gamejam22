@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
+        if (s == null || s.source.isPlaying)
         {
             return;
         }
@@ -54,8 +54,21 @@ public class AudioManager : MonoBehaviour
     public void Stop(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            return;
+        }
         s.source.Stop();
     }
 
+    public void Pitch(string name, float pitch)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            return;
+        }
+        s.source.pitch = pitch;
+    }
 
 }

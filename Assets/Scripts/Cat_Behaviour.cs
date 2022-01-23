@@ -6,13 +6,16 @@ using TMPro;
 public class Cat_Behaviour : MonoBehaviour
 {
 
-    public enum temp_state {frozen, cold, neutral, hot, boiling}
+    public enum temp_state { frozen, cold, neutral, hot, boiling }
 
     public double temperature;
     public GameObject logicmanager_obj;
     public GameObject sinlist_obj;
     public temp_state temperature_state_flag;
     public GameObject catbuttonprefab;
+    private bool writing = false;
+
+    private AudioManager am;
 
     public bool isBad = false;
     public bool isPoofed = false;
@@ -38,30 +41,32 @@ public class Cat_Behaviour : MonoBehaviour
     {
         catsingen = GetComponent<CatSinGenerator>();
         sprite = GetComponent<SpriteRenderer>();
-  
+
 
         logicmanager_obj = GameObject.Find("GameLogicManager");
         logicmanager = logicmanager_obj.GetComponent<GameLogicManager>();
-        
+
         sinlist_obj = GameObject.FindWithTag("SinList");
         tmpro = sinlist_obj.GetComponent<TextMeshProUGUI>();
 
-        rectTransform = transform.GetComponent<RectTransform>();  
+        rectTransform = transform.GetComponent<RectTransform>();
         sinlistui = sinlist_obj.GetComponent<SinList_UI>();
 
         canvas = GameObject.Find("Canvas");
 
 
         generated_sins = catsingen.GeneratedSins;
+
+        am = FindObjectOfType<AudioManager>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
         temperature = (double)Random.Range(50, 55);
 
-    
+
         //delays
         Invoke("checkDisposition", 0.5f);
 
@@ -80,63 +85,77 @@ public class Cat_Behaviour : MonoBehaviour
     void Update()
     {
         RefreshTemperature();
-
+        kettleWhistle();
 
     }
 
     void RefreshTemperature()
     {
         //checks for cat current temperature
-        if (temperature < 0.0) 
+        if (temperature < 0.0)
         {
             temperature_state_flag = temp_state.frozen;
             isPoofed = true;
         }
 
-        if ((temperature > 0.0) && (temperature <= 33.3)) 
+        if ((temperature > 0.0) && (temperature <= 33.3))
         {
             temperature_state_flag = temp_state.cold;
         }
 
-        if ((temperature > 33.3) && (temperature <= 66.6)) 
+        if ((temperature > 33.3) && (temperature <= 66.6))
         {
             temperature_state_flag = temp_state.neutral;
         }
 
         if ((temperature > 66.6) && (temperature <= 99.9))
         {
-             temperature_state_flag = temp_state.hot;
+            temperature_state_flag = temp_state.hot;
         }
 
-        if (temperature > 100.0) 
+        if (temperature > 100.0)
         {
             temperature_state_flag = temp_state.boiling;
             isPoofed = true;
         }
 
-        
+
         if ((temperature_state_flag == temp_state.boiling) || (temperature_state_flag == temp_state.frozen))
         {
-           if ((temperature_state_flag == temp_state.boiling) && (isBad == true)) {logicmanager.UpdateNumWrongJudgement();}
-           else if ((temperature_state_flag == temp_state.frozen) && (isBad == false)) {logicmanager.UpdateNumWrongJudgement();}
-           else {logicmanager.UpdateNumCorrectJudgement();}
+            if ((temperature_state_flag == temp_state.boiling) && (isBad == true)) { logicmanager.UpdateNumWrongJudgement(); }
+            else if ((temperature_state_flag == temp_state.frozen) && (isBad == false)) { logicmanager.UpdateNumWrongJudgement(); }
+            else { logicmanager.UpdateNumCorrectJudgement(); }
         }
+    }
+
+
+
+        private void kettleWhistle()
+        {
+
+
+
+        if (temperature > 66.6)
+        {
+            am.Play("KettleWhistle");
+        }
+        if (isPoofed || temperature < 66.6)
+        {
+            am.Stop("KettleWhistle");
+        }
+        float pitch = (float)(temperature / 100) * 3;
+        am.Pitch("KettleWhistle", pitch);
     }
 
     void DrawListText()
     {
-        if(writing == false)
+
+        tmpro.text = string.Empty;  //clear the string once when called
+        
+        for(int i = 0; i < generated_sins.Count; i++)
         {
-            writing == true;
-            tmpro.text = ("");  //clear the string once when called
-            foreach (string item in generated_sins)
-            {
-                tmpro.text += ("-" + item + "\n");
-            }
-            writing == false;
+            tmpro.text += ("-" + generated_sins[i] + "\n");
         }
     }
-
-    
 
 }
