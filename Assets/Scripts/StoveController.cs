@@ -14,9 +14,9 @@ public class StoveController : MonoBehaviour
     private bool switchIsOn = false;
 
     [SerializeField]
-    private double heatRate = 10; //default
+    private double heatRate = 15; //default
     [SerializeField]
-    private double coolRate = 10; //default
+    private double coolRate = 5; //default
     [SerializeField]
     private float coolingBuffer = 3;
     [SerializeField]
