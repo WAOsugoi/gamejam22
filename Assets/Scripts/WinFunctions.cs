@@ -24,9 +24,9 @@ public class WinFunctions : MonoBehaviour
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
-        if (SceneManager.sceneCount > nextSceneIndex)
+        if (6 > nextSceneIndex)
         {
-            if(PlayerPrefs.GetInt("NumStageUnlocked") < nextSceneIndex)
+            if (PlayerPrefs.GetInt("NumStageUnlocked") < nextSceneIndex)
                 PlayerPrefs.SetInt("NumStageUnlocked", nextSceneIndex);
             SceneManager.LoadScene(nextSceneIndex);
         }
