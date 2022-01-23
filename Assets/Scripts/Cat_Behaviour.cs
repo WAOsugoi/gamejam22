@@ -125,12 +125,18 @@ public class Cat_Behaviour : MonoBehaviour
 
     void DrawListText()
     {
-        
-           tmpro.text = ("");  //clear the string once when called
+        if(writing == false)
+        {
+            writing == true;
+            tmpro.text = ("");  //clear the string once when called
             foreach (string item in generated_sins)
             {
                 tmpro.text += ("-" + item + "\n");
             }
+            writing == false;
+        }
     }
+
+    
 
 }
