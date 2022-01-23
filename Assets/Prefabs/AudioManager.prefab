@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Placeholder
-    clip: {fileID: 8300000, guid: c3b93506d753edd4da2eb11b1e071af6, type: 3}
-    volume: 0
-    pitch: 0
-    loop: 0
+  - name: Menu
+    clip: {fileID: 8300000, guid: 3811ff66ec63ff94486e06636198b11b, type: 3}
+    volume: 0.621
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
