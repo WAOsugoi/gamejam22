@@ -6,6 +6,10 @@ TagManager:
   tags:
   - CatObject
   - SinList
+  - Stove 1
+  - Stove 2
+  - Stove 3
+  - Stove 4
   layers:
   - Default
   - TransparentFX
