@@ -26,6 +26,7 @@ public class Cat_Behaviour : MonoBehaviour
     CatSinGenerator catsingen;
     SpriteRenderer sprite;
     GameObject canvas;
+    ParticleSystem particles;
 
     SinList_UI sinlistui;
 
@@ -133,7 +134,7 @@ public class Cat_Behaviour : MonoBehaviour
     void DrawListText()
     {
         Debug.Log("CLICLICKCLCJSISKC");
-         
+
             tmpro.text = ("");  //clear the string once when called
             foreach (string item in generated_sins)
             {

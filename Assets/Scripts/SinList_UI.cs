@@ -53,16 +53,14 @@ public class SinList_UI : MonoBehaviour
         {
             transform.localPosition += Vector3.left * Time.deltaTime * slidespeed;
         }
-
-
     }
-
+    
     public void pullOutList()
     {
         isOut = (!isOut);
     }
 
-    
+
 
 
 
