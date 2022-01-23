@@ -14,9 +14,9 @@ public class StoveController : MonoBehaviour
     private bool switchIsOn = false;
 
     [SerializeField]
-    private double heatRate = 1500; //default
+    private double heatRate = 500; //default
     [SerializeField]
-    private double coolRate = 1500; //default
+    private double coolRate = 500; //default
     [SerializeField]
     private float coolingBuffer = 3;
 
@@ -42,7 +42,7 @@ public class StoveController : MonoBehaviour
             if (cat.GetComponent<Cat_Behaviour>().isPoofed)
             {
                 CancelInvoke();
-                //Destroy(cat);
+                Destroy(cat);
             }
         }
     }
@@ -69,25 +69,20 @@ public class StoveController : MonoBehaviour
     // Spawn cat if there are still cats to judge and current pot is empty
     private void spawnCat()
     {
-        // if (logic.GetComponent<GameLogicManager>().AllowedToSpawn() && isSpawnable)
-        // {
-        //     cat = spawner.GetComponent<Spawner>().spawnObject();    // Spawn cat object
-        //     logic.GetComponent<GameLogicManager>().SpawnCatIfAllowed(); // Total cat count - 1
         isSpawnable = false;
         InvokeRepeating("decrTemp", coolingBuffer, 0.5f);
-        //}
     }
 
     private void incrTemp()
     {
         cat.GetComponent<Cat_Behaviour>().temperature += heatRate * Time.deltaTime;
-
+        Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
     }
 
     private void decrTemp()
     {
         cat.GetComponent<Cat_Behaviour>().temperature -= coolRate * Time.deltaTime;
-
+        Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
     }
 
 
