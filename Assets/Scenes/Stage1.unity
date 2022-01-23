@@ -532,17 +532,17 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: f162f553030ff304d9a102859b1dd666, type: 3}
+  m_PointAction: {fileID: 0}
+  m_MoveAction: {fileID: 0}
+  m_SubmitAction: {fileID: 0}
+  m_CancelAction: {fileID: 0}
+  m_LeftClickAction: {fileID: 0}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
+  m_TrackedDevicePositionAction: {fileID: 0}
+  m_TrackedDeviceOrientationAction: {fileID: 0}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
 --- !u!114 &1334522730
@@ -707,6 +707,62 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -3.56
       objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 06868ed6-696c-4715-98f3-b3a49201c4e8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
+      value: ef808e5c-4bd4-4825-9675-d15b529a2416
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
+      value: 2ef6146b-f32c-4614-81b5-cd979bd93667
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_ActionId
+      value: 4631ef0c-6659-42d1-928e-8f0d551927fa
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_ActionId
+      value: 2f474dd0-2b45-4978-8c39-a191c9a6f581
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
+      value: Key1/New action[/Keyboard/1]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
+      value: Key2/New action[/Keyboard/2]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_ActionName
+      value: Key3/New action[/Keyboard/3]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_ActionName
+      value: Key4/New action[/Keyboard/4]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1873016147}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1873016147}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: switchOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327820, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: switchOff
+      objectReference: {fileID: 0}
     - target: {fileID: 6716121574821327822, guid: e05c754bf35493345836089487041261, type: 3}
       propertyPath: heatRate
       value: 10
@@ -770,6 +826,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6716121574821327816, guid: e05c754bf35493345836089487041261, type: 3}
   m_PrefabInstance: {fileID: 1873016144}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1873016147 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6716121574821327822, guid: e05c754bf35493345836089487041261, type: 3}
+  m_PrefabInstance: {fileID: 1873016144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873016145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aeed8027ad09eb47bda8590fab56057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2145707339 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7849344258251076768, guid: 5c71073bd1c3f094589f55059ffcee01, type: 3}
