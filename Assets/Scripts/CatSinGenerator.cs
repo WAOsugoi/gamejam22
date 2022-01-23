@@ -92,12 +92,6 @@ public class CatSinGenerator : MonoBehaviour
             }
 
         }
-
-        //debug code
-        // for (int i = 0; i < GeneratedSins.Count; i++)
-        // {
-        //     //Debug.Log(GeneratedSins[i]);
-        // }
     }
 
 

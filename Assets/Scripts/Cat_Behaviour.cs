@@ -8,10 +8,6 @@ public class Cat_Behaviour : MonoBehaviour
 
     public enum temp_state {frozen, cold, neutral, hot, boiling}
 
-    //disable later
-    private bool referredByList = true;
-    private bool alreadyWritten = false;
-
     public double temperature;
     public GameObject logicmanager_obj;
     public GameObject sinlist_obj;
@@ -69,7 +65,7 @@ public class Cat_Behaviour : MonoBehaviour
         //delays
         Invoke("checkDisposition", 0.5f);
 
-        Invoke("DrawListText", 0.1f);
+        //Invoke("DrawListText", 0.1f);
     }
 
     void checkDisposition()
@@ -84,6 +80,7 @@ public class Cat_Behaviour : MonoBehaviour
     void Update()
     {
         RefreshTemperature();
+
 
     }
 
@@ -128,13 +125,18 @@ public class Cat_Behaviour : MonoBehaviour
 
     void DrawListText()
     {
-        Debug.Log("CLICLICKCLCJSISKC");
-
+        if(writing == false)
+        {
+            writing == true;
             tmpro.text = ("");  //clear the string once when called
             foreach (string item in generated_sins)
             {
                 tmpro.text += ("-" + item + "\n");
             }
+            writing == false;
+        }
     }
+
+    
 
 }

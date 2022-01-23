@@ -706,6 +706,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire I
       objectReference: {fileID: 0}
+    - target: {fileID: 7849344258251076770, guid: 5c71073bd1c3f094589f55059ffcee01, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849344258251076770, guid: 5c71073bd1c3f094589f55059ffcee01, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -593695653
+      objectReference: {fileID: 0}
     - target: {fileID: 7849344258251076771, guid: 5c71073bd1c3f094589f55059ffcee01, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -716,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7849344258251076771, guid: 5c71073bd1c3f094589f55059ffcee01, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.74
+      value: -1.31
       objectReference: {fileID: 0}
     - target: {fileID: 7849344258251076771, guid: 5c71073bd1c3f094589f55059ffcee01, type: 3}
       propertyPath: m_LocalPosition.z
