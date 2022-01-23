@@ -19,7 +19,7 @@ public class StoveController : MonoBehaviour
     private double coolRate = 10; //default
     [SerializeField]
     private float coolingBuffer = 3;
-    [SerializeField] 
+    [SerializeField]
     private GameObject stoveFire;
 
     private void Awake()
