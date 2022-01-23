@@ -12,6 +12,8 @@ public class CatSpawner : MonoBehaviour
     private GameObject spawnedCat;
     private GameObject logic;
 
+    private SpriteRenderer sr;
+
     private int randomIndex;
 
     private void Awake()
@@ -41,12 +43,23 @@ public class CatSpawner : MonoBehaviour
                 spawnedCat = Instantiate(objectToBeSpawned);
                 spawnedCat.transform.position = stove.GetComponent<StoveController>().spawner.transform.position;
                 spawnedCat.transform.parent = stove.transform.parent;
-                spawnedCat.transform.SetAsFirstSibling();
                 stove.GetComponent<StoveController>().cat = spawnedCat;
                 stove.GetComponent<StoveController>().isSpawnable = false;
                 logic.GetComponent<GameLogicManager>().SpawnCatIfAllowed();
+
+                sr = spawnedCat.GetComponent<SpriteRenderer>();
+                if (stove.CompareTag("Stove 3") || stove.CompareTag("Stove 4"))
+                {
+                    sr.sortingOrder = 0;
+                }
+                else if (stove.CompareTag("Stove 1") || stove.CompareTag("Stove 2"))
+                {
+                    sr.sortingOrder = 1;
+                }
+
                 Debug.Log("Cat spawned");
             }
         }
     }
+
 }
