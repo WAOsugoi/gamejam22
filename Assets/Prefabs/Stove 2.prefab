@@ -136,6 +136,7 @@ MonoBehaviour:
   coolRate: 5
   coolingBuffer: 3
   stoveFire: {fileID: 0}
+  finishAnimation: {fileID: 2727109349108176718, guid: 19ffe5730744e1c49b037faf35843d48, type: 3}
 --- !u!114 &5823218792975642590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,8 +220,8 @@ MonoBehaviour:
     m_ActionName: Stove4/SwitchOff[/Keyboard/i]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: c31fc52a-3fba-46af-849f-1defcccd0e52
-    m_ActionName: CAT_SwitchListText/Mouseclick[/Mouse/press]
+    m_ActionId: bec78854-c430-4eb2-9777-5e9b7abdeacb
+    m_ActionName: New action map/New action[/Mouse/press]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Stove2
