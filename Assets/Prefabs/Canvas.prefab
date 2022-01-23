@@ -608,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 5279849612689591661, guid: 56154b613fb9ea54c87be3f4c0fcb6be, type: 2}
     - target: {fileID: 7281010463344303824, guid: a5e347ca71c9c7f4c849ad547d7c9a26, type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7281010463344303825, guid: a5e347ca71c9c7f4c849ad547d7c9a26, type: 3}
       propertyPath: m_SizeDelta.x

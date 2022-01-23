@@ -68,10 +68,10 @@ public class Cat_Behaviour : MonoBehaviour
         //delays
         Invoke("checkDisposition", 0.5f);
 
-        Invoke("DrawListText", 0.5f);
+        Invoke("DrawListText", 0.1f);
 
         //INSTANTIALIZES CATBUTTON
-        // GameObject catbutton = Instantiate(catbuttonprefab);
+        // GameObject catbutton = Instantiate(catbuttonprefab) as GameObject;
         // catbutton.transform.SetParent(canvas.transform, false);
         // catbutton.GetComponent<RectTransform>().localPosition = this.GetComponent<Transform>().position + (Vector3.down * 3);
     }
@@ -88,7 +88,7 @@ public class Cat_Behaviour : MonoBehaviour
     void Update()
     {
         RefreshTemperature();
-        DrawListText();
+
     }
 
     void RefreshTemperature()
@@ -130,18 +130,20 @@ public class Cat_Behaviour : MonoBehaviour
         }
     }
 
-    public void DrawListText()
+    void DrawListText()
     {
-        if (alreadyWritten == false)
-        {   
-            tmpro.text = ("");
+        Debug.Log("CLICLICKCLCJSISKC");
+       // if (alreadyWritten == false)
+     //   {   
+            tmpro.text = ("");  //clear the string once when called
             foreach (string item in generated_sins)
             {
                 tmpro.text += ("-" + item + "\n");
             }
-            alreadyWritten = true;
-        }
+            //alreadyWritten = true;
+       // }
     }
+
 
     public void OtherClicked()
     {
