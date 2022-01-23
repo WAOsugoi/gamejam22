@@ -13,6 +13,7 @@ public class Cat_Behaviour : MonoBehaviour
     public GameObject sinlist_obj;
     public temp_state temperature_state_flag;
     public GameObject catbuttonprefab;
+    private bool writing = false;
 
     public bool isBad = false;
     public bool isPoofed = false;
@@ -125,16 +126,13 @@ public class Cat_Behaviour : MonoBehaviour
 
     void DrawListText()
     {
-        if(writing == false)
-        {
-            writing == true;
-            tmpro.text = ("");  //clear the string once when called
-            foreach (string item in generated_sins)
+            tmpro.text = string.Empty;  //clear the string once when called
+            
+            for(int i = 0; i < generated_sins.Count; i++)
             {
-                tmpro.text += ("-" + item + "\n");
+                tmpro.text += ("-" + generated_sins[i] + "\n");
             }
-            writing == false;
-        }
+
     }
 
     
