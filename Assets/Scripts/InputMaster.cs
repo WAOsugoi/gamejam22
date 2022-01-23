@@ -216,13 +216,13 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""CAT_SwitchListText"",
-            ""id"": ""df88a898-0a45-4778-96dd-a3b9abf2c22e"",
+            ""name"": ""New action map"",
+            ""id"": ""2c5e8d35-1ad5-4c86-a686-bd94c3ad4cbb"",
             ""actions"": [
                 {
-                    ""name"": ""Mouseclick"",
+                    ""name"": ""New action"",
                     ""type"": ""Button"",
-                    ""id"": ""c31fc52a-3fba-46af-849f-1defcccd0e52"",
+                    ""id"": ""bec78854-c430-4eb2-9777-5e9b7abdeacb"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -232,12 +232,12 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""6062a2c0-79dc-466e-afb2-450464daafb0"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Press"",
+                    ""id"": ""177753b7-380a-4bb7-b986-2122ff1dcb91"",
+                    ""path"": ""<Mouse>/press"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Mouseclick"",
+                    ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -262,9 +262,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Stove4 = asset.FindActionMap("Stove4", throwIfNotFound: true);
         m_Stove4_SwitchOn = m_Stove4.FindAction("SwitchOn", throwIfNotFound: true);
         m_Stove4_SwitchOff = m_Stove4.FindAction("SwitchOff", throwIfNotFound: true);
-        // CAT_SwitchListText
-        m_CAT_SwitchListText = asset.FindActionMap("CAT_SwitchListText", throwIfNotFound: true);
-        m_CAT_SwitchListText_Mouseclick = m_CAT_SwitchListText.FindAction("Mouseclick", throwIfNotFound: true);
+        // New action map
+        m_Newactionmap = asset.FindActionMap("New action map", throwIfNotFound: true);
+        m_Newactionmap_Newaction = m_Newactionmap.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -485,38 +485,38 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     }
     public Stove4Actions @Stove4 => new Stove4Actions(this);
 
-    // CAT_SwitchListText
-    private readonly InputActionMap m_CAT_SwitchListText;
-    private ICAT_SwitchListTextActions m_CAT_SwitchListTextActionsCallbackInterface;
-    private readonly InputAction m_CAT_SwitchListText_Mouseclick;
-    public struct CAT_SwitchListTextActions
+    // New action map
+    private readonly InputActionMap m_Newactionmap;
+    private INewactionmapActions m_NewactionmapActionsCallbackInterface;
+    private readonly InputAction m_Newactionmap_Newaction;
+    public struct NewactionmapActions
     {
         private @InputMaster m_Wrapper;
-        public CAT_SwitchListTextActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Mouseclick => m_Wrapper.m_CAT_SwitchListText_Mouseclick;
-        public InputActionMap Get() { return m_Wrapper.m_CAT_SwitchListText; }
+        public NewactionmapActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_Newactionmap_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_Newactionmap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(CAT_SwitchListTextActions set) { return set.Get(); }
-        public void SetCallbacks(ICAT_SwitchListTextActions instance)
+        public static implicit operator InputActionMap(NewactionmapActions set) { return set.Get(); }
+        public void SetCallbacks(INewactionmapActions instance)
         {
-            if (m_Wrapper.m_CAT_SwitchListTextActionsCallbackInterface != null)
+            if (m_Wrapper.m_NewactionmapActionsCallbackInterface != null)
             {
-                @Mouseclick.started -= m_Wrapper.m_CAT_SwitchListTextActionsCallbackInterface.OnMouseclick;
-                @Mouseclick.performed -= m_Wrapper.m_CAT_SwitchListTextActionsCallbackInterface.OnMouseclick;
-                @Mouseclick.canceled -= m_Wrapper.m_CAT_SwitchListTextActionsCallbackInterface.OnMouseclick;
+                @Newaction.started -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnNewaction;
             }
-            m_Wrapper.m_CAT_SwitchListTextActionsCallbackInterface = instance;
+            m_Wrapper.m_NewactionmapActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Mouseclick.started += instance.OnMouseclick;
-                @Mouseclick.performed += instance.OnMouseclick;
-                @Mouseclick.canceled += instance.OnMouseclick;
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
             }
         }
     }
-    public CAT_SwitchListTextActions @CAT_SwitchListText => new CAT_SwitchListTextActions(this);
+    public NewactionmapActions @Newactionmap => new NewactionmapActions(this);
     public interface IStove1Actions
     {
         void OnSwitchOn(InputAction.CallbackContext context);
@@ -537,8 +537,8 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnSwitchOn(InputAction.CallbackContext context);
         void OnSwitchOff(InputAction.CallbackContext context);
     }
-    public interface ICAT_SwitchListTextActions
+    public interface INewactionmapActions
     {
-        void OnMouseclick(InputAction.CallbackContext context);
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }

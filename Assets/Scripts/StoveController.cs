@@ -30,7 +30,8 @@ public class StoveController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         logic = GameObject.Find("GameLogicManager");
         am = FindObjectOfType<AudioManager>();
-        switchOff();
+        stoveFire.GetComponent<Renderer>().enabled = false;
+        stoveFire.GetComponent<Animator>().enabled = false;
     }
 
     // Start is called before the first frame update
