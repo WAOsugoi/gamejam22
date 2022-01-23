@@ -50,6 +50,7 @@ public class StoveController : MonoBehaviour
             {
                 //CancelInvoke();
                 Destroy(cat);
+                isSpawnable = true;
             }
             if (switchIsOn)
                 incrTemp();
