@@ -160,15 +160,16 @@ public class Cat_Behaviour : MonoBehaviour
         }
     }
 
-    void DrawListText()
+    private void DrawListText()
     {
-
         tmpro.text = string.Empty;  //clear the string once when called
-
+        string NewSinList = string.Empty;
         for (int i = 0; i < generated_sins.Count; i++)
         {
-            tmpro.text += ("-" + generated_sins[i] + "\n");
+            NewSinList += ("-" + generated_sins[i] + "\n");
         }
+        tmpro.text = NewSinList;
     }
+
 
 }

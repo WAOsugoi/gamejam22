@@ -45,7 +45,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfCatsToBeJudged: 10
   numberOfChance: 3
+  currentNumberOfCatsToBeJudged: 0
   currentCanvas: {fileID: 0}
   winScreenPrefab: {fileID: 1751958705956976483, guid: 411eff771c0cfc64ca93545d0d20de0b, type: 3}
   loseScreenPrefab: {fileID: 1602429039306525748, guid: 5c5a588774bcf9a4595b9ab4da3e8cf3, type: 3}
+  gameCompleteScreenPrefab: {fileID: 1109883052352663075, guid: f960be7ebd1b07145ac1c57eceb62389, type: 3}
   catCounterPrefab: {fileID: 7603400378643723906, guid: d31c5187c8df2dd4b9a74e6b04dc3df6, type: 3}
+  currCatCounter: {fileID: 0}
+  numWrongJudgement: 0
+  numCorrectJudgement: 0
