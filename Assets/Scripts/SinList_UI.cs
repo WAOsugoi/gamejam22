@@ -62,10 +62,7 @@ public class SinList_UI : MonoBehaviour
         isOut = (!isOut);
     }
 
-    void CheckForMoreCats()
-    {
-
-    }
+    
 
 
 

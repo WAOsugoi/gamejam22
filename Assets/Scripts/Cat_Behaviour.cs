@@ -10,6 +10,7 @@ public class Cat_Behaviour : MonoBehaviour
 
     //disable later
     private bool referredByList = true;
+    private bool alreadyWritten = false;
 
     public double temperature;
     public GameObject logicmanager_obj;
@@ -61,7 +62,7 @@ public class Cat_Behaviour : MonoBehaviour
     void Start()
     {
         
-        temperature = (double)Random.Range(30, 70);
+        temperature = (double)Random.Range(50, 55);
 
     
         //delays
@@ -70,28 +71,24 @@ public class Cat_Behaviour : MonoBehaviour
         Invoke("DrawListText", 0.5f);
 
         //INSTANTIALIZES CATBUTTON
-        GameObject catbutton = Instantiate(catbuttonprefab);
-        catbutton.transform.SetParent(canvas.transform, false);
-        catbutton.GetComponent<RectTransform>().localPosition = this.GetComponent<Transform>().position;
-        //catbutton.transform.localScale = new Vector3(1, 1, 1);
+        // GameObject catbutton = Instantiate(catbuttonprefab);
+        // catbutton.transform.SetParent(canvas.transform, false);
+        // catbutton.GetComponent<RectTransform>().localPosition = this.GetComponent<Transform>().position + (Vector3.down * 3);
     }
 
     void checkDisposition()
     {
         if (catsingen.goodDisposition < catsingen.badDisposition)
         {
-            //Debug.Log("called");
             isBad = true;
         }
     }
-
-    //highlight the cat that the list is referring to.
-
 
     // Update is called once per frame
     void Update()
     {
         RefreshTemperature();
+        DrawListText();
     }
 
     void RefreshTemperature()
@@ -133,18 +130,20 @@ public class Cat_Behaviour : MonoBehaviour
         }
     }
 
-    void DrawListText()
+    public void DrawListText()
     {
-        if (referredByList == true)
+        if (alreadyWritten == false)
         {   
+            tmpro.text = ("");
             foreach (string item in generated_sins)
             {
                 tmpro.text += ("-" + item + "\n");
             }
+            alreadyWritten = true;
         }
     }
 
-    public void SwapList(GameObject selected)
+    public void OtherClicked()
     {
         DrawListText();
     }

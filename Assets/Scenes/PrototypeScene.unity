@@ -442,42 +442,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4804499987966881900, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-      propertyPath: m_Transition
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804499987966881900, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-      propertyPath: m_SpriteState.m_PressedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 16065bdb7465e904ea4ca81b827651c1, type: 3}
-    - target: {fileID: 4804499987966881900, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-      propertyPath: m_SpriteState.m_DisabledSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 16065bdb7465e904ea4ca81b827651c1, type: 3}
-    - target: {fileID: 4804499987966881900, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-      propertyPath: m_SpriteState.m_SelectedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 16065bdb7465e904ea4ca81b827651c1, type: 3}
-    - target: {fileID: 4804499987966881900, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-      propertyPath: m_SpriteState.m_HighlightedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 16065bdb7465e904ea4ca81b827651c1, type: 3}
-    - target: {fileID: 4804499988318485405, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 56154b613fb9ea54c87be3f4c0fcb6be, type: 2}
-    - target: {fileID: 4804499988318485405, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5279849612689591661, guid: 56154b613fb9ea54c87be3f4c0fcb6be, type: 2}
-    - target: {fileID: 7870772881499382448, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 56154b613fb9ea54c87be3f4c0fcb6be, type: 2}
-    - target: {fileID: 7870772881499382448, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5279849612689591661, guid: 56154b613fb9ea54c87be3f4c0fcb6be, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1e88fdb5e8545c4d84ffdeab9fdccd7, type: 3}
 --- !u!1001 &6716121575333981562
