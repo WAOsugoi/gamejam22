@@ -14,9 +14,9 @@ public class StoveController : MonoBehaviour
     private bool switchIsOn = false;
 
     [SerializeField]
-    private double heatRate = 1500; //default
+    private double heatRate = 10; //default
     [SerializeField]
-    private double coolRate = 1500; //default
+    private double coolRate = 10; //default
     [SerializeField]
     private float coolingBuffer = 3;
 
@@ -42,7 +42,7 @@ public class StoveController : MonoBehaviour
             if (cat.GetComponent<Cat_Behaviour>().isPoofed)
             {
                 CancelInvoke();
-                //Destroy(cat);
+                Destroy(cat);
             }
         }
     }
@@ -53,7 +53,7 @@ public class StoveController : MonoBehaviour
         CancelInvoke();
         switchIsOn = true;
         sr.flipX = false;
-        InvokeRepeating("incrTemp", 0, 0.5f);
+        InvokeRepeating("incrTemp", 0, 1);
 
     }
 
@@ -63,31 +63,26 @@ public class StoveController : MonoBehaviour
         CancelInvoke();
         switchIsOn = false;
         sr.flipX = true;
-        InvokeRepeating("decrTemp", 0, 0.5f);
+        InvokeRepeating("decrTemp", 0, 1);
     }
 
     // Spawn cat if there are still cats to judge and current pot is empty
     private void spawnCat()
     {
-        // if (logic.GetComponent<GameLogicManager>().AllowedToSpawn() && isSpawnable)
-        // {
-        //     cat = spawner.GetComponent<Spawner>().spawnObject();    // Spawn cat object
-        //     logic.GetComponent<GameLogicManager>().SpawnCatIfAllowed(); // Total cat count - 1
         isSpawnable = false;
-        InvokeRepeating("decrTemp", coolingBuffer, 0.5f);
-        //}
+        InvokeRepeating("decrTemp", coolingBuffer, 1);
     }
 
     private void incrTemp()
     {
         cat.GetComponent<Cat_Behaviour>().temperature += heatRate * Time.deltaTime;
-
+        Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
     }
 
     private void decrTemp()
     {
         cat.GetComponent<Cat_Behaviour>().temperature -= coolRate * Time.deltaTime;
-
+        Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
     }
 
 
