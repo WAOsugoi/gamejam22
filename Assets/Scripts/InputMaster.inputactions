@@ -194,13 +194,13 @@
             ]
         },
         {
-            "name": "CAT_SwitchListText",
-            "id": "df88a898-0a45-4778-96dd-a3b9abf2c22e",
+            "name": "New action map",
+            "id": "2c5e8d35-1ad5-4c86-a686-bd94c3ad4cbb",
             "actions": [
                 {
-                    "name": "Mouseclick",
+                    "name": "New action",
                     "type": "Button",
-                    "id": "c31fc52a-3fba-46af-849f-1defcccd0e52",
+                    "id": "bec78854-c430-4eb2-9777-5e9b7abdeacb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -210,12 +210,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "6062a2c0-79dc-466e-afb2-450464daafb0",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "Press",
+                    "id": "177753b7-380a-4bb7-b986-2122ff1dcb91",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Mouseclick",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

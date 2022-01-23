@@ -661,7 +661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2625333380482587167, guid: 08382f552ebc10f4ab783ff81ced9be8, type: 3}
       propertyPath: heatRate
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2625333380482587167, guid: 08382f552ebc10f4ab783ff81ced9be8, type: 3}
       propertyPath: stoveFire
@@ -835,6 +835,10 @@ PrefabInstance:
       value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: 6716121574821327822, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: heatRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716121574821327822, guid: e05c754bf35493345836089487041261, type: 3}
       propertyPath: stoveFire
       value: 
       objectReference: {fileID: 1592586777}
@@ -1006,6 +1010,10 @@ PrefabInstance:
       value: -1.52
       objectReference: {fileID: 0}
     - target: {fileID: 5823218792975642588, guid: 6fc03d4bc2ce6f44d80bf256bee65c2e, type: 3}
+      propertyPath: heatRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823218792975642588, guid: 6fc03d4bc2ce6f44d80bf256bee65c2e, type: 3}
       propertyPath: stoveFire
       value: 
       objectReference: {fileID: 1024850004}
@@ -1138,7 +1146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3516064287152610759, guid: 411ab7c7f4b7c3447831a4da61d1c64d, type: 3}
       propertyPath: heatRate
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3516064287152610759, guid: 411ab7c7f4b7c3447831a4da61d1c64d, type: 3}
       propertyPath: stoveFire
