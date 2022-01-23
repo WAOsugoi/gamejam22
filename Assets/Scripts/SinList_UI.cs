@@ -44,25 +44,20 @@ public class SinList_UI : MonoBehaviour
         catsThisFrame = logicmanager.currentNumberOfCatsToBeJudged;
         //Debug.Log(catsThisFrame);
 
-        if ((isOut) && (transform.localPosition.x! < -693))
+        if ((isOut) && (transform.localPosition.x! < -583))
         {
             transform.localPosition += Vector3.right * Time.deltaTime * slidespeed;
         }
 
-        if ((!isOut) && (transform.localPosition.x! > -1070))
+        if ((!isOut) && (transform.localPosition.x! > -1317))
         {
             transform.localPosition += Vector3.left * Time.deltaTime * slidespeed;
         }
     }
-    
+
     public void pullOutList()
     {
         isOut = (!isOut);
     }
-
-
-
-
-
 
 }

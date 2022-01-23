@@ -7,10 +7,17 @@ using UnityEngine.SceneManagement;
 public class WinFunctions : MonoBehaviour
 {
     public Button nextStageButton;
+    public GameObject[] failNotes = new GameObject[3];
+    public GameLogicManager glm;
     // Start is called before the first frame update
     void Start()
     {
         nextStageButton.onClick.AddListener(NextGoNextScene);
+        glm = GameObject.Find("GameLogicManager").GetComponent<GameLogicManager>();
+        for (int iter = 0; iter < glm.numWrongJudgement; ++iter)
+        {
+            failNotes[iter].SetActive(true);
+        }
     }
 
     public void NextGoNextScene()
