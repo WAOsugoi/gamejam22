@@ -10,6 +10,7 @@ public class StoveController : MonoBehaviour
     private GameObject logic;
     public GameObject cat;
     private SpriteRenderer sr;
+    private AudioManager am;
 
     private bool switchIsOn = false;
 
@@ -28,6 +29,7 @@ public class StoveController : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         logic = GameObject.Find("GameLogicManager");
+        am = FindObjectOfType<AudioManager>();
         switchOff();
     }
 
@@ -59,6 +61,15 @@ public class StoveController : MonoBehaviour
     // Turn on fire and flip switch to ON position
     public void switchOn()
     {
+        if (switchIsOn)
+        {
+            am.Play("SwitchFail");
+        }
+        else
+        {
+            am.Play("SwitchFire");
+            am.Play("FireLoop");
+        }
         //CancelInvoke();
         switchIsOn = true;
         sr.flipX = false;
@@ -71,6 +82,15 @@ public class StoveController : MonoBehaviour
     // Turn off fire and flip switch to OFF position
     public void switchOff()
     {
+        if (!switchIsOn)
+        {
+            am.Play("SwitchFail");
+        }
+        else
+        {
+            am.Play("SwitchFire");
+            am.Stop("FireLoop");
+        }
         //CancelInvoke();
         switchIsOn = false;
         sr.flipX = true;
