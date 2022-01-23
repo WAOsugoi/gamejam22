@@ -14,6 +14,7 @@ public class GameLogicManager : MonoBehaviour
     public GameObject currentCanvas;
     public GameObject winScreenPrefab;
     public GameObject loseScreenPrefab;
+    public GameObject gameCompleteScreenPrefab;
     public GameObject catCounterPrefab;
     public CatCounter currCatCounter;
 
@@ -64,8 +65,17 @@ public class GameLogicManager : MonoBehaviour
     {
         if (!endConMet)
         {
-            GameObject winScreen = Instantiate(winScreenPrefab) as GameObject;
-            winScreen.transform.SetParent(currentCanvas.transform, false);
+            if(SceneManager.GetActiveScene().buildIndex >= 5)
+            {
+                GameObject winScreen = Instantiate(gameCompleteScreenPrefab) as GameObject;
+                winScreen.transform.SetParent(currentCanvas.transform, false);
+            }
+            else
+            {
+                GameObject winScreen = Instantiate(winScreenPrefab) as GameObject;
+                winScreen.transform.SetParent(currentCanvas.transform, false);
+            }
+            
             endConMet = true;
         }
 
