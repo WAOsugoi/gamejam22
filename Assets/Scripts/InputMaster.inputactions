@@ -192,6 +192,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "CAT_SwitchListText",
+            "id": "df88a898-0a45-4778-96dd-a3b9abf2c22e",
+            "actions": [
+                {
+                    "name": "Mouseclick",
+                    "type": "Button",
+                    "id": "c31fc52a-3fba-46af-849f-1defcccd0e52",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6062a2c0-79dc-466e-afb2-450464daafb0",
+                    "path": "<Mouse>/press",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouseclick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

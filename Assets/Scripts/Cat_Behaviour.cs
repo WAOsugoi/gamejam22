@@ -71,7 +71,7 @@ public class Cat_Behaviour : MonoBehaviour
         Invoke("DrawListText", 0.5f);
 
         //INSTANTIALIZES CATBUTTON
-        // GameObject catbutton = Instantiate(catbuttonprefab);
+        // GameObject catbutton = Instantiate(catbuttonprefab) as GameObject;
         // catbutton.transform.SetParent(canvas.transform, false);
         // catbutton.GetComponent<RectTransform>().localPosition = this.GetComponent<Transform>().position + (Vector3.down * 3);
     }
@@ -130,7 +130,7 @@ public class Cat_Behaviour : MonoBehaviour
         }
     }
 
-    public void DrawListText()
+    void DrawListText()
     {
         if (alreadyWritten == false)
         {   
@@ -142,6 +142,7 @@ public class Cat_Behaviour : MonoBehaviour
             alreadyWritten = true;
         }
     }
+
 
     public void OtherClicked()
     {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5602216536105747662}
   - component: {fileID: 5602216536105747661}
   - component: {fileID: -7054416091402349647}
+  - component: {fileID: 8689785002806021163}
   m_Layer: 0
   m_Name: Cat
   m_TagString: CatObject
@@ -146,6 +147,84 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8689785002806021163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5602216536105747660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: f162f553030ff304d9a102859b1dd666, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6c3e5d81-b591-4d45-86ac-803e75363d46
+    m_ActionName: Stove1/SwitchOn[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d583348a-47ec-4bc7-b443-20fa1bcbc8d8
+    m_ActionName: Stove1/SwitchOff[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fc141e41-35ba-4de1-a3de-1e79a0621577
+    m_ActionName: Stove2/SwitchOn[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d7895fe3-7cd8-454c-b4ce-827e07dde0c5
+    m_ActionName: Stove2/SwitchOff[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5e38eb8a-d59b-4db0-84e4-dcfb5408865b
+    m_ActionName: Stove3/SwitchOn[/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2e12ce54-ff11-487f-8314-6cc483ac9815
+    m_ActionName: Stove3/SwitchOff[/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 73294e3c-09e7-48df-abca-978990f09182
+    m_ActionName: Stove4/SwitchOn[/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1849fe5b-4894-497e-b439-57d6b8065529
+    m_ActionName: Stove4/SwitchOff[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5602216536105747662}
+        m_TargetAssemblyTypeName: Cat_Behaviour, Assembly-CSharp
+        m_MethodName: DrawListText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c31fc52a-3fba-46af-849f-1defcccd0e52
+    m_ActionName: CAT_SwitchListText/Mouseclick[/Mouse/press]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: CAT_SwitchListText
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &1440865147050719283
 PrefabInstance:
   m_ObjectHideFlags: 0
