@@ -234,7 +234,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""6062a2c0-79dc-466e-afb2-450464daafb0"",
                     ""path"": ""<Mouse>/press"",
-                    ""interactions"": ""Press"",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Mouseclick"",

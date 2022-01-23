@@ -21,7 +21,7 @@ public class Cat_Behaviour : MonoBehaviour
     public bool isBad = false;
     public bool isPoofed = false;
 
-    TMP_Text tmpro;
+    TextMeshProUGUI tmpro;
     GameLogicManager logicmanager;
     CatSinGenerator catsingen;
     SpriteRenderer sprite;
@@ -48,7 +48,7 @@ public class Cat_Behaviour : MonoBehaviour
         logicmanager = logicmanager_obj.GetComponent<GameLogicManager>();
         
         sinlist_obj = GameObject.FindWithTag("SinList");
-        tmpro = sinlist_obj.GetComponent<TMP_Text>();
+        tmpro = sinlist_obj.GetComponent<TextMeshProUGUI>();
 
         rectTransform = transform.GetComponent<RectTransform>();  
         sinlistui = sinlist_obj.GetComponent<SinList_UI>();
@@ -70,11 +70,6 @@ public class Cat_Behaviour : MonoBehaviour
         Invoke("checkDisposition", 0.5f);
 
         Invoke("DrawListText", 0.1f);
-
-        //INSTANTIALIZES CATBUTTON
-        // GameObject catbutton = Instantiate(catbuttonprefab) as GameObject;
-        // catbutton.transform.SetParent(canvas.transform, false);
-        // catbutton.GetComponent<RectTransform>().localPosition = this.GetComponent<Transform>().position + (Vector3.down * 3);
     }
 
     void checkDisposition()
@@ -140,18 +135,6 @@ public class Cat_Behaviour : MonoBehaviour
             {
                 tmpro.text += ("-" + item + "\n");
             }
-
     }
-
-
-    public void OtherClicked()
-    {
-        DrawListText();
-    }
-
-
-
-
-
 
 }
