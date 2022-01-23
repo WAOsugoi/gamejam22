@@ -493,6 +493,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c71073bd1c3f094589f55059ffcee01, type: 3}
+--- !u!1001 &946916381
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2019.2996
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 429.36017
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 207461.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262930, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69419791328262956, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
+      propertyPath: m_Name
+      value: GameplayBGMAudio
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df05204ed6127574aa17892c8f22b3d9, type: 3}
 --- !u!1001 &964952068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -574,6 +631,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2625333380482587161, guid: 08382f552ebc10f4ab783ff81ced9be8, type: 3}
+      propertyPath: m_TagString
+      value: Stove 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2625333380482587167, guid: 08382f552ebc10f4ab783ff81ced9be8, type: 3}
       propertyPath: stoveFire
       value: 
@@ -637,6 +698,10 @@ PrefabInstance:
     - target: {fileID: 2625333381231957990, guid: 08382f552ebc10f4ab783ff81ced9be8, type: 3}
       propertyPath: m_Name
       value: Stove 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625333381231957990, guid: 08382f552ebc10f4ab783ff81ced9be8, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08382f552ebc10f4ab783ff81ced9be8, type: 3}
@@ -729,6 +794,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6716121574821327816, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_TagString
+      value: Stove 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6716121574821327822, guid: e05c754bf35493345836089487041261, type: 3}
       propertyPath: stoveFire
       value: 
@@ -793,6 +862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stove 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6716121574868680247, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e05c754bf35493345836089487041261, type: 3}
 --- !u!1 &1303694860 stripped
@@ -815,6 +888,10 @@ PrefabInstance:
     - target: {fileID: 5823218792248680997, guid: 6fc03d4bc2ce6f44d80bf256bee65c2e, type: 3}
       propertyPath: m_Name
       value: Stove 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823218792248680997, guid: 6fc03d4bc2ce6f44d80bf256bee65c2e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5823218792248680998, guid: 6fc03d4bc2ce6f44d80bf256bee65c2e, type: 3}
       propertyPath: m_RootOrder
@@ -871,6 +948,10 @@ PrefabInstance:
     - target: {fileID: 5823218792248680998, guid: 6fc03d4bc2ce6f44d80bf256bee65c2e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823218792975642586, guid: 6fc03d4bc2ce6f44d80bf256bee65c2e, type: 3}
+      propertyPath: m_TagString
+      value: Stove 2
       objectReference: {fileID: 0}
     - target: {fileID: 5823218792975642588, guid: 6fc03d4bc2ce6f44d80bf256bee65c2e, type: 3}
       propertyPath: stoveFire
@@ -967,6 +1048,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3516064287152610752, guid: 411ab7c7f4b7c3447831a4da61d1c64d, type: 3}
+      propertyPath: m_TagString
+      value: Stove 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3516064287152610759, guid: 411ab7c7f4b7c3447831a4da61d1c64d, type: 3}
       propertyPath: stoveFire
       value: 
@@ -1030,6 +1115,10 @@ PrefabInstance:
     - target: {fileID: 3516064287507767771, guid: 411ab7c7f4b7c3447831a4da61d1c64d, type: 3}
       propertyPath: m_Name
       value: Stove 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516064287507767771, guid: 411ab7c7f4b7c3447831a4da61d1c64d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 411ab7c7f4b7c3447831a4da61d1c64d, type: 3}

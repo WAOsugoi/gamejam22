@@ -22,10 +22,13 @@ public class StoveController : MonoBehaviour
     [SerializeField]
     private GameObject stoveFire;
 
+
+
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         logic = GameObject.Find("GameLogicManager");
+        switchOff();
     }
 
     // Start is called before the first frame update
@@ -40,22 +43,26 @@ public class StoveController : MonoBehaviour
     {
         if (cat)
         {
-            spawnCat();
+            //spawnCat();
             if (cat.GetComponent<Cat_Behaviour>().isPoofed)
             {
-                CancelInvoke();
+                //CancelInvoke();
                 Destroy(cat);
             }
+            if (switchIsOn)
+                incrTemp();
+            else
+                decrTemp();
         }
     }
 
     // Turn on fire and flip switch to ON position
     public void switchOn()
     {
-        CancelInvoke();
+        //CancelInvoke();
         switchIsOn = true;
         sr.flipX = false;
-        InvokeRepeating("incrTemp", 0, 1);
+        //InvokeRepeating("incrTemp", 0, 1);
         stoveFire.GetComponent<Renderer>().enabled = true;
         stoveFire.GetComponent<Animator>().enabled = true;
 
@@ -64,10 +71,10 @@ public class StoveController : MonoBehaviour
     // Turn off fire and flip switch to OFF position
     public void switchOff()
     {
-        CancelInvoke();
+        //CancelInvoke();
         switchIsOn = false;
         sr.flipX = true;
-        InvokeRepeating("decrTemp", 0, 1);
+        //InvokeRepeating("decrTemp", 0, 1);
         stoveFire.GetComponent<Renderer>().enabled = false;
         stoveFire.GetComponent<Animator>().enabled = false;
     }
@@ -76,7 +83,8 @@ public class StoveController : MonoBehaviour
     private void spawnCat()
     {
         isSpawnable = false;
-        InvokeRepeating("decrTemp", coolingBuffer, 1);
+        switchIsOn = false;
+        //InvokeRepeating("decrTemp", coolingBuffer, 1);
     }
 
     private void incrTemp()
