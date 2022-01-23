@@ -19,6 +19,8 @@ public class StoveController : MonoBehaviour
     private double coolRate = 10; //default
     [SerializeField]
     private float coolingBuffer = 3;
+    [SerializeField] 
+    private GameObject stoveFire;
 
     private void Awake()
     {
@@ -54,6 +56,8 @@ public class StoveController : MonoBehaviour
         switchIsOn = true;
         sr.flipX = false;
         InvokeRepeating("incrTemp", 0, 1);
+        stoveFire.GetComponent<Renderer>().enabled = true;
+        stoveFire.GetComponent<Animator>().enabled = true;
 
     }
 
@@ -64,6 +68,8 @@ public class StoveController : MonoBehaviour
         switchIsOn = false;
         sr.flipX = true;
         InvokeRepeating("decrTemp", 0, 1);
+        stoveFire.GetComponent<Renderer>().enabled = false;
+        stoveFire.GetComponent<Animator>().enabled = false;
     }
 
     // Spawn cat if there are still cats to judge and current pot is empty

@@ -133,15 +133,13 @@ public class Cat_Behaviour : MonoBehaviour
     void DrawListText()
     {
         Debug.Log("CLICLICKCLCJSISKC");
-       // if (alreadyWritten == false)
-     //   {   
+         
             tmpro.text = ("");  //clear the string once when called
             foreach (string item in generated_sins)
             {
                 tmpro.text += ("-" + item + "\n");
             }
-            //alreadyWritten = true;
-       // }
+
     }
 
 
