@@ -35,21 +35,29 @@ public class CatSinGenerator : MonoBehaviour
     void InitializeSins()
     {
         //load up the GoodSins
-        GoodSins.Add("Cuddled their depressed owner");
-        GoodSins.Add("Caught a hamster for lonely owner");
-        GoodSins.Add("starred in a viral tiktok video");
-        GoodSins.Add("immortalized in an internet meme");
-        GoodSins.Add("did a good mlem");
-        GoodSins.Add("Did not eat the christmas turkey");
-        GoodSins.Add("Did not throw up a hairball today");
+        GoodSins.Add("Caught rat for owner");
+        GoodSins.Add("Scratched cat pole");
+        GoodSins.Add("Slept in the cat tower");
+        GoodSins.Add("Warmed laps");
+        GoodSins.Add("Purred when pet");
+        GoodSins.Add("Did not refuse a bath!");
+        GoodSins.Add("Patiently waited for food");
+        GoodSins.Add("Did owner's homework");
+        GoodSins.Add("Provided for owner with youtube career.");
+        GoodSins.Add("Saved the galaxy.");
 
-        BadSins.Add("bit the owner's ass");
-        BadSins.Add("toppled mug");
-        BadSins.Add("blew up the eiffel tower");
-        BadSins.Add("broke the brroklyn bridge");
-        BadSins.Add("crashed digipen servers");
-        BadSins.Add("Started an underground catnip ring");
-        BadSins.Add("TOOK THE NEIGHBOURS FISH");
+
+        BadSins.Add("Ate too much catnip");
+        BadSins.Add("Catnip addiction");
+        BadSins.Add("Broke 10 vases");
+        BadSins.Add("Scratched owner's face at night");
+        BadSins.Add("Tore up owner's homework");
+        BadSins.Add("Ate bird room mate");
+        BadSins.Add("Refused to catch the roach.");
+        BadSins.Add("Did not pay rent.");
+        BadSins.Add("Stole neighbour's underwear");
+        BadSins.Add("Brought fleas into the house");
+        BadSins.Add("Acted in FELINES: the bad movie");
     }
 
     //generatesins adds randomised strings from the good and bad sins onto a list.

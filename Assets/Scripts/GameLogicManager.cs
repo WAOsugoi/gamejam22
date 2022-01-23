@@ -17,8 +17,8 @@ public class GameLogicManager : MonoBehaviour
     public GameObject catCounterPrefab;
     public CatCounter currCatCounter;
 
-    private int numWrongJudgement = 0;
-    private int numCorrectJudgement = 0;
+    public int numWrongJudgement = 0;
+    public int numCorrectJudgement = 0;
 
     private bool endConMet = false;
 
