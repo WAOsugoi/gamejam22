@@ -8,6 +8,7 @@ public class SinList_UI : MonoBehaviour
     RectTransform transform;
     [SerializeField] float ListPullLength = 0.0f;
     [SerializeField] float slidespeed = 150.0f;
+    private AudioManager am;
 
     bool isOut = false;
 
@@ -28,6 +29,7 @@ public class SinList_UI : MonoBehaviour
 
         logicmanager_obj = GameObject.Find("GameLogicManager");
         logicmanager = logicmanager_obj.GetComponent<GameLogicManager>();
+        am = FindObjectOfType<AudioManager>();
     }
 
     // Start is called before the first frame update
@@ -58,6 +60,15 @@ public class SinList_UI : MonoBehaviour
     public void pullOutList()
     {
         isOut = (!isOut);
+        if (isOut)
+        {
+            am.Play("RustleIn");
+        }
+        else
+        {
+            am.Play("RustleOut");
+        }
+
     }
 
 }

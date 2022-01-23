@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
       propertyPath: sounds.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
       propertyPath: meows.Array.data[0].clip
@@ -754,6 +754,22 @@ PrefabInstance:
       value: CatPop
       objectReference: {fileID: 0}
     - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97c051bdaf0437a4bb4ca352bb4c5d6a, type: 3}
+    - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: RustleIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a0e5ff95338cc28429fa09c7ae527ab9, type: 3}
+    - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: RustleOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
       propertyPath: meows.Array.data[0].volume
       value: 0.5
       objectReference: {fileID: 0}
@@ -826,6 +842,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
+      propertyPath: sounds.Array.data[7].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
       propertyPath: meows.Array.data[10].volume
       value: 0.5
       objectReference: {fileID: 0}
@@ -856,6 +880,14 @@ PrefabInstance:
     - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
       propertyPath: sounds.Array.data[5].volume
       value: 0.622
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572889611909184296, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.715
       objectReference: {fileID: 0}
     - target: {fileID: 9169419133841965899, guid: 44f284adbab2d6543af73d1c1dbff381, type: 3}
       propertyPath: m_Name
@@ -979,6 +1011,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6716121574821327817, guid: e05c754bf35493345836089487041261, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.56
+      objectReference: {fileID: 0}
     - target: {fileID: 6716121574821327822, guid: e05c754bf35493345836089487041261, type: 3}
       propertyPath: heatRate
       value: 10
