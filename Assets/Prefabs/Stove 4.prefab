@@ -99,8 +99,8 @@ MonoBehaviour:
   isSpawnable: 0
   spawner: {fileID: 3516064288172832622}
   cat: {fileID: 0}
-  heatRate: 1500
-  coolRate: 1500
+  heatRate: 10
+  coolRate: 8
   coolingBuffer: 3
   stoveFire: {fileID: 0}
   finishAnimation: {fileID: 2727109349108176718, guid: 19ffe5730744e1c49b037faf35843d48, type: 3}
@@ -189,6 +189,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: bec78854-c430-4eb2-9777-5e9b7abdeacb
     m_ActionName: New action map/New action[/Mouse/press]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ef808e5c-4bd4-4825-9675-d15b529a2416
+    m_ActionName: Key1/New action[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2ef6146b-f32c-4614-81b5-cd979bd93667
+    m_ActionName: Key2/New action[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4631ef0c-6659-42d1-928e-8f0d551927fa
+    m_ActionName: Key3/New action[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2f474dd0-2b45-4978-8c39-a191c9a6f581
+    m_ActionName: Key4/New action[/Keyboard/4]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Stove4

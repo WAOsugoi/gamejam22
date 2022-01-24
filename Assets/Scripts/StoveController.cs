@@ -53,13 +53,14 @@ public class StoveController : MonoBehaviour
                 //CancelInvoke();
                 GameObject animation = Instantiate(finishAnimation) as GameObject;
                 animation.transform.position = cat.transform.position;
-                if(cat.GetComponent<Cat_Behaviour>().temperature_state_flag == Cat_Behaviour.temp_state.boiling)
+                if (cat.GetComponent<Cat_Behaviour>().temperature_state_flag == Cat_Behaviour.temp_state.boiling)
                     animation.GetComponent<AscendOrDescend>().PlayAnimation(true);
                 else
                     animation.GetComponent<AscendOrDescend>().PlayAnimation(false);
                 Destroy(cat);
                 isSpawnable = true;
             }
+
             if (switchIsOn)
                 incrTemp();
             else
