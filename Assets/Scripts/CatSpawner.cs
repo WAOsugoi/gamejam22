@@ -12,6 +12,7 @@ public class CatSpawner : MonoBehaviour
     private GameObject spawnedCat;
     private GameObject logic;
 
+    private AudioManager am;
     private SpriteRenderer sr;
 
     private int randomIndex;
@@ -24,6 +25,7 @@ public class CatSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        am = FindObjectOfType<AudioManager>();
         StartCoroutine(SpawnCat());
     }
 
@@ -57,9 +59,15 @@ public class CatSpawner : MonoBehaviour
                     sr.sortingOrder = 1;
                 }
 
-                Debug.Log("Cat spawned");
+                PlayOnSpawn();
+                //Debug.Log("Cat spawned");
             }
         }
     }
 
+    private void PlayOnSpawn()
+    {
+        am.PlayNya();
+        am.Play("SpawnPop");
+    }
 }
