@@ -194,7 +194,7 @@
             ]
         },
         {
-            "name": "New action map",
+            "name": "MouseClick",
             "id": "2c5e8d35-1ad5-4c86-a686-bd94c3ad4cbb",
             "actions": [
                 {
@@ -216,118 +216,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "CAT_SwitchListText",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Key1",
-            "id": "739f6823-1de6-4a8e-b9cd-6c2c46636ec8",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "ef808e5c-4bd4-4825-9675-d15b529a2416",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Tap",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "6708caea-d9ab-42c0-91c0-7ff6265e8ed0",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Key2",
-            "id": "1ae31844-c595-4e37-8c68-ced57f2bd2ed",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "2ef6146b-f32c-4614-81b5-cd979bd93667",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Tap",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "ec9895bf-e9b0-4097-bf39-06e7f174efcb",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Key3",
-            "id": "07ebaa4b-6a19-4170-b1ad-e4f3486c89fa",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "4631ef0c-6659-42d1-928e-8f0d551927fa",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Tap",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "ec44f00a-1be6-47d8-afa4-56d9faefcc0f",
-                    "path": "<Keyboard>/3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Key4",
-            "id": "c5e5c654-6195-48ce-8321-7c1dfebdc027",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "2f474dd0-2b45-4978-8c39-a191c9a6f581",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Tap",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "2e1cb8c3-d0b2-445e-9b28-216bc12b61b3",
-                    "path": "<Keyboard>/4",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

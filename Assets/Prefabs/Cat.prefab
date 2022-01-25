@@ -105,7 +105,7 @@ MonoBehaviour:
   logicmanager_obj: {fileID: 0}
   sinlist_obj: {fileID: 0}
   temperature_state_flag: 0
-  catbuttonprefab: {fileID: 8928845933617780435, guid: 9a76e1962ceca3d488635d146ab7840f, type: 3}
+  catbuttonprefab: {fileID: 0}
   isBad: 0
   isPoofed: 0
 --- !u!114 &5602216536105747661
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5602216536105747660}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -234,73 +234,9 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: bec78854-c430-4eb2-9777-5e9b7abdeacb
     m_ActionName: New action map/CAT_SwitchListText[/Mouse/press]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5602216536105747662}
-        m_TargetAssemblyTypeName: Cat_Behaviour, Assembly-CSharp
-        m_MethodName: DrawListText
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: checkForTag1
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ef808e5c-4bd4-4825-9675-d15b529a2416
-    m_ActionName: Key1/New action[/Keyboard/1,/Keyboard/2,/Keyboard/3,/Keyboard/4]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5602216536105747660}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SendMessage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: checkForTag2
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 2ef6146b-f32c-4614-81b5-cd979bd93667
-    m_ActionName: Key2/New action[/Keyboard/2]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5602216536105747660}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SendMessage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: checkForTag3
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 4631ef0c-6659-42d1-928e-8f0d551927fa
-    m_ActionName: Key3/New action[/Keyboard/3]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5602216536105747660}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SendMessage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: checkForTag4
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 2f474dd0-2b45-4978-8c39-a191c9a6f581
-    m_ActionName: Key4/New action[/Keyboard/4]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: New action map
+  m_DefaultActionMap: MouseClick
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!198 &-4425536496051438644

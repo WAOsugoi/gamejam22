@@ -216,7 +216,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""New action map"",
+            ""name"": ""MouseClick"",
             ""id"": ""2c5e8d35-1ad5-4c86-a686-bd94c3ad4cbb"",
             ""actions"": [
                 {
@@ -242,118 +242,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""Key1"",
-            ""id"": ""739f6823-1de6-4a8e-b9cd-6c2c46636ec8"",
-            ""actions"": [
-                {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
-                    ""id"": ""ef808e5c-4bd4-4825-9675-d15b529a2416"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Tap"",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""6708caea-d9ab-42c0-91c0-7ff6265e8ed0"",
-                    ""path"": ""<Keyboard>/1"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Key2"",
-            ""id"": ""1ae31844-c595-4e37-8c68-ced57f2bd2ed"",
-            ""actions"": [
-                {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
-                    ""id"": ""2ef6146b-f32c-4614-81b5-cd979bd93667"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Tap"",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""ec9895bf-e9b0-4097-bf39-06e7f174efcb"",
-                    ""path"": ""<Keyboard>/2"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Key3"",
-            ""id"": ""07ebaa4b-6a19-4170-b1ad-e4f3486c89fa"",
-            ""actions"": [
-                {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
-                    ""id"": ""4631ef0c-6659-42d1-928e-8f0d551927fa"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Tap"",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""ec44f00a-1be6-47d8-afa4-56d9faefcc0f"",
-                    ""path"": ""<Keyboard>/3"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Key4"",
-            ""id"": ""c5e5c654-6195-48ce-8321-7c1dfebdc027"",
-            ""actions"": [
-                {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
-                    ""id"": ""2f474dd0-2b45-4978-8c39-a191c9a6f581"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Tap"",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""2e1cb8c3-d0b2-445e-9b28-216bc12b61b3"",
-                    ""path"": ""<Keyboard>/4"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": []
@@ -374,21 +262,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Stove4 = asset.FindActionMap("Stove4", throwIfNotFound: true);
         m_Stove4_SwitchOn = m_Stove4.FindAction("SwitchOn", throwIfNotFound: true);
         m_Stove4_SwitchOff = m_Stove4.FindAction("SwitchOff", throwIfNotFound: true);
-        // New action map
-        m_Newactionmap = asset.FindActionMap("New action map", throwIfNotFound: true);
-        m_Newactionmap_CAT_SwitchListText = m_Newactionmap.FindAction("CAT_SwitchListText", throwIfNotFound: true);
-        // Key1
-        m_Key1 = asset.FindActionMap("Key1", throwIfNotFound: true);
-        m_Key1_Newaction = m_Key1.FindAction("New action", throwIfNotFound: true);
-        // Key2
-        m_Key2 = asset.FindActionMap("Key2", throwIfNotFound: true);
-        m_Key2_Newaction = m_Key2.FindAction("New action", throwIfNotFound: true);
-        // Key3
-        m_Key3 = asset.FindActionMap("Key3", throwIfNotFound: true);
-        m_Key3_Newaction = m_Key3.FindAction("New action", throwIfNotFound: true);
-        // Key4
-        m_Key4 = asset.FindActionMap("Key4", throwIfNotFound: true);
-        m_Key4_Newaction = m_Key4.FindAction("New action", throwIfNotFound: true);
+        // MouseClick
+        m_MouseClick = asset.FindActionMap("MouseClick", throwIfNotFound: true);
+        m_MouseClick_CAT_SwitchListText = m_MouseClick.FindAction("CAT_SwitchListText", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -609,29 +485,29 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     }
     public Stove4Actions @Stove4 => new Stove4Actions(this);
 
-    // New action map
-    private readonly InputActionMap m_Newactionmap;
-    private INewactionmapActions m_NewactionmapActionsCallbackInterface;
-    private readonly InputAction m_Newactionmap_CAT_SwitchListText;
-    public struct NewactionmapActions
+    // MouseClick
+    private readonly InputActionMap m_MouseClick;
+    private IMouseClickActions m_MouseClickActionsCallbackInterface;
+    private readonly InputAction m_MouseClick_CAT_SwitchListText;
+    public struct MouseClickActions
     {
         private @InputMaster m_Wrapper;
-        public NewactionmapActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @CAT_SwitchListText => m_Wrapper.m_Newactionmap_CAT_SwitchListText;
-        public InputActionMap Get() { return m_Wrapper.m_Newactionmap; }
+        public MouseClickActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
+        public InputAction @CAT_SwitchListText => m_Wrapper.m_MouseClick_CAT_SwitchListText;
+        public InputActionMap Get() { return m_Wrapper.m_MouseClick; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(NewactionmapActions set) { return set.Get(); }
-        public void SetCallbacks(INewactionmapActions instance)
+        public static implicit operator InputActionMap(MouseClickActions set) { return set.Get(); }
+        public void SetCallbacks(IMouseClickActions instance)
         {
-            if (m_Wrapper.m_NewactionmapActionsCallbackInterface != null)
+            if (m_Wrapper.m_MouseClickActionsCallbackInterface != null)
             {
-                @CAT_SwitchListText.started -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnCAT_SwitchListText;
-                @CAT_SwitchListText.performed -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnCAT_SwitchListText;
-                @CAT_SwitchListText.canceled -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnCAT_SwitchListText;
+                @CAT_SwitchListText.started -= m_Wrapper.m_MouseClickActionsCallbackInterface.OnCAT_SwitchListText;
+                @CAT_SwitchListText.performed -= m_Wrapper.m_MouseClickActionsCallbackInterface.OnCAT_SwitchListText;
+                @CAT_SwitchListText.canceled -= m_Wrapper.m_MouseClickActionsCallbackInterface.OnCAT_SwitchListText;
             }
-            m_Wrapper.m_NewactionmapActionsCallbackInterface = instance;
+            m_Wrapper.m_MouseClickActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @CAT_SwitchListText.started += instance.OnCAT_SwitchListText;
@@ -640,139 +516,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
             }
         }
     }
-    public NewactionmapActions @Newactionmap => new NewactionmapActions(this);
-
-    // Key1
-    private readonly InputActionMap m_Key1;
-    private IKey1Actions m_Key1ActionsCallbackInterface;
-    private readonly InputAction m_Key1_Newaction;
-    public struct Key1Actions
-    {
-        private @InputMaster m_Wrapper;
-        public Key1Actions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_Key1_Newaction;
-        public InputActionMap Get() { return m_Wrapper.m_Key1; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(Key1Actions set) { return set.Get(); }
-        public void SetCallbacks(IKey1Actions instance)
-        {
-            if (m_Wrapper.m_Key1ActionsCallbackInterface != null)
-            {
-                @Newaction.started -= m_Wrapper.m_Key1ActionsCallbackInterface.OnNewaction;
-                @Newaction.performed -= m_Wrapper.m_Key1ActionsCallbackInterface.OnNewaction;
-                @Newaction.canceled -= m_Wrapper.m_Key1ActionsCallbackInterface.OnNewaction;
-            }
-            m_Wrapper.m_Key1ActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
-            }
-        }
-    }
-    public Key1Actions @Key1 => new Key1Actions(this);
-
-    // Key2
-    private readonly InputActionMap m_Key2;
-    private IKey2Actions m_Key2ActionsCallbackInterface;
-    private readonly InputAction m_Key2_Newaction;
-    public struct Key2Actions
-    {
-        private @InputMaster m_Wrapper;
-        public Key2Actions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_Key2_Newaction;
-        public InputActionMap Get() { return m_Wrapper.m_Key2; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(Key2Actions set) { return set.Get(); }
-        public void SetCallbacks(IKey2Actions instance)
-        {
-            if (m_Wrapper.m_Key2ActionsCallbackInterface != null)
-            {
-                @Newaction.started -= m_Wrapper.m_Key2ActionsCallbackInterface.OnNewaction;
-                @Newaction.performed -= m_Wrapper.m_Key2ActionsCallbackInterface.OnNewaction;
-                @Newaction.canceled -= m_Wrapper.m_Key2ActionsCallbackInterface.OnNewaction;
-            }
-            m_Wrapper.m_Key2ActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
-            }
-        }
-    }
-    public Key2Actions @Key2 => new Key2Actions(this);
-
-    // Key3
-    private readonly InputActionMap m_Key3;
-    private IKey3Actions m_Key3ActionsCallbackInterface;
-    private readonly InputAction m_Key3_Newaction;
-    public struct Key3Actions
-    {
-        private @InputMaster m_Wrapper;
-        public Key3Actions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_Key3_Newaction;
-        public InputActionMap Get() { return m_Wrapper.m_Key3; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(Key3Actions set) { return set.Get(); }
-        public void SetCallbacks(IKey3Actions instance)
-        {
-            if (m_Wrapper.m_Key3ActionsCallbackInterface != null)
-            {
-                @Newaction.started -= m_Wrapper.m_Key3ActionsCallbackInterface.OnNewaction;
-                @Newaction.performed -= m_Wrapper.m_Key3ActionsCallbackInterface.OnNewaction;
-                @Newaction.canceled -= m_Wrapper.m_Key3ActionsCallbackInterface.OnNewaction;
-            }
-            m_Wrapper.m_Key3ActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
-            }
-        }
-    }
-    public Key3Actions @Key3 => new Key3Actions(this);
-
-    // Key4
-    private readonly InputActionMap m_Key4;
-    private IKey4Actions m_Key4ActionsCallbackInterface;
-    private readonly InputAction m_Key4_Newaction;
-    public struct Key4Actions
-    {
-        private @InputMaster m_Wrapper;
-        public Key4Actions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_Key4_Newaction;
-        public InputActionMap Get() { return m_Wrapper.m_Key4; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(Key4Actions set) { return set.Get(); }
-        public void SetCallbacks(IKey4Actions instance)
-        {
-            if (m_Wrapper.m_Key4ActionsCallbackInterface != null)
-            {
-                @Newaction.started -= m_Wrapper.m_Key4ActionsCallbackInterface.OnNewaction;
-                @Newaction.performed -= m_Wrapper.m_Key4ActionsCallbackInterface.OnNewaction;
-                @Newaction.canceled -= m_Wrapper.m_Key4ActionsCallbackInterface.OnNewaction;
-            }
-            m_Wrapper.m_Key4ActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
-            }
-        }
-    }
-    public Key4Actions @Key4 => new Key4Actions(this);
+    public MouseClickActions @MouseClick => new MouseClickActions(this);
     public interface IStove1Actions
     {
         void OnSwitchOn(InputAction.CallbackContext context);
@@ -793,24 +537,8 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnSwitchOn(InputAction.CallbackContext context);
         void OnSwitchOff(InputAction.CallbackContext context);
     }
-    public interface INewactionmapActions
+    public interface IMouseClickActions
     {
         void OnCAT_SwitchListText(InputAction.CallbackContext context);
-    }
-    public interface IKey1Actions
-    {
-        void OnNewaction(InputAction.CallbackContext context);
-    }
-    public interface IKey2Actions
-    {
-        void OnNewaction(InputAction.CallbackContext context);
-    }
-    public interface IKey3Actions
-    {
-        void OnNewaction(InputAction.CallbackContext context);
-    }
-    public interface IKey4Actions
-    {
-        void OnNewaction(InputAction.CallbackContext context);
     }
 }

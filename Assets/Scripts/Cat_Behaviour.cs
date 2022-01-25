@@ -13,7 +13,8 @@ public class Cat_Behaviour : MonoBehaviour
     public GameObject sinlist_obj;
     public temp_state temperature_state_flag;
     public GameObject catbuttonprefab;
-    private bool writing = false;
+
+    bool isActive = false;
 
     private AudioManager am;
 
@@ -88,6 +89,16 @@ public class Cat_Behaviour : MonoBehaviour
         kettleWhistle();
         catEndState();
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (isActive == true)
+            {
+            Debug.Log("left mouse clicked");
+            DrawListText();
+            }
+
+        }
+
     }
 
     void RefreshTemperature()
@@ -160,15 +171,28 @@ public class Cat_Behaviour : MonoBehaviour
         }
     }
 
-    private void DrawListText()
+    void OnMouseEnter()
     {
+        isActive = true;
+    }
+
+    void OnMouseExit()
+    {
+        isActive = false;
+    }
+
+   public void DrawListText()
+    {
+       // Debug.Log("button pressed"); 
         tmpro.text = string.Empty;  //clear the string once when called
         string NewSinList = string.Empty;
+                Debug.Log("meow");
         for (int i = 0; i < generated_sins.Count; i++)
         {
-            NewSinList += ("-" + generated_sins[i] + "\n");
+            tmpro.text += ("-" + generated_sins[i] + "\n");
+            Debug.Log(NewSinList);
         }
-        tmpro.text = NewSinList;
+        // = NewSinList;
     }
 
 
