@@ -21,7 +21,8 @@ public class GameLogicManager : MonoBehaviour
     public int numWrongJudgement = 0;
     public int numCorrectJudgement = 0;
 
-    private bool endConMet = false;
+    public bool endConMet = false;
+    public bool isWin;
 
     // Start is called before the first frame update
     void Awake()
@@ -65,7 +66,7 @@ public class GameLogicManager : MonoBehaviour
     {
         if (!endConMet)
         {
-            if(SceneManager.GetActiveScene().buildIndex >= 5)
+            if (SceneManager.GetActiveScene().buildIndex >= 5)
             {
                 GameObject winScreen = Instantiate(gameCompleteScreenPrefab) as GameObject;
                 winScreen.transform.SetParent(currentCanvas.transform, false);
@@ -75,8 +76,9 @@ public class GameLogicManager : MonoBehaviour
                 GameObject winScreen = Instantiate(winScreenPrefab) as GameObject;
                 winScreen.transform.SetParent(currentCanvas.transform, false);
             }
-            
+
             endConMet = true;
+            isWin = true;
         }
 
     }
@@ -88,6 +90,7 @@ public class GameLogicManager : MonoBehaviour
             GameObject loseScreen = Instantiate(loseScreenPrefab) as GameObject;
             loseScreen.transform.SetParent(currentCanvas.transform, false);
             endConMet = true;
+            isWin = false;
         }
     }
 

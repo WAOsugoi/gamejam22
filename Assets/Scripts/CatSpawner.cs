@@ -68,6 +68,6 @@ public class CatSpawner : MonoBehaviour
     private void PlayOnSpawn()
     {
         am.PlayNya();
-        am.Play("SpawnPop");
+        am.PlayOneShot("SpawnPop");
     }
 }

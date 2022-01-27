@@ -87,14 +87,15 @@ public class Cat_Behaviour : MonoBehaviour
     {
         RefreshTemperature();
         kettleWhistle();
+        freezing();
         catEndState();
 
         if (Input.GetMouseButtonDown(0))
         {
             if (isActive == true)
             {
-            Debug.Log("left mouse clicked");
-            DrawListText();
+                Debug.Log("left mouse clicked");
+                DrawListText();
             }
 
         }
@@ -157,16 +158,28 @@ public class Cat_Behaviour : MonoBehaviour
         am.Volume("KettleWhistle", vol);
     }
 
+    private void freezing()
+    {
+        if (temperature < 33.3)
+        {
+            am.Play("IceFreezing");
+        }
+        if (isPoofed || temperature > 33.3)
+        {
+            am.Stop("IceFreezing");
+        }
+    }
+
     private void catEndState()
     {
         if (temperature_state_flag == temp_state.frozen)
         {
-            am.Play("CatFreeze");
+            am.PlayOneShot("CatFreeze");
             am.PlayNya();
         }
         else if (temperature_state_flag == temp_state.boiling)
         {
-            am.Play("CatPop");
+            am.PlayOneShot("CatPop");
             am.PlayNya();
         }
     }
@@ -181,12 +194,12 @@ public class Cat_Behaviour : MonoBehaviour
         isActive = false;
     }
 
-   public void DrawListText()
+    public void DrawListText()
     {
-       // Debug.Log("button pressed"); 
+        // Debug.Log("button pressed"); 
         tmpro.text = string.Empty;  //clear the string once when called
         string NewSinList = string.Empty;
-                Debug.Log("meow");
+        Debug.Log("meow");
         for (int i = 0; i < generated_sins.Count; i++)
         {
             tmpro.text += ("-" + generated_sins[i] + "\n");
