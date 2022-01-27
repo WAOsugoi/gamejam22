@@ -35,7 +35,7 @@ public class CatSpawner : MonoBehaviour
         while (logic.GetComponent<GameLogicManager>().AllowedToSpawn())
         {
 
-            yield return new WaitForSeconds(Random.Range(1, 3));
+            yield return new WaitForSeconds(Random.Range(2, 4));
 
             randomIndex = Random.Range(0, stoveSpawnRef.Length);
 
@@ -68,6 +68,6 @@ public class CatSpawner : MonoBehaviour
     private void PlayOnSpawn()
     {
         am.PlayNya();
-        am.Play("SpawnPop");
+        am.PlayOneShot("SpawnPop");
     }
 }

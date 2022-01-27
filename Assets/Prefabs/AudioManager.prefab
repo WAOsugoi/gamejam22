@@ -44,51 +44,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: PlayGame
+    clip: {fileID: 8300000, guid: 75529b395fcc3c944bd050cfa7f429b6, type: 3}
+    volume: 0.702
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   - name: SwitchFire
     clip: {fileID: 8300000, guid: 15d4439e976828c408d7a848fd28176b, type: 3}
-    volume: 0.222
+    volume: 0.702
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: SwitchFail
     clip: {fileID: 8300000, guid: ee99e5ed69c29854d993980a77c1a40a, type: 3}
-    volume: 0.222
-    pitch: 0.81
+    volume: 0.702
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: FireLoop
     clip: {fileID: 8300000, guid: 0dbd423874623f04484fa9a0aa1c89d3, type: 3}
-    volume: 0.081
+    volume: 0.254
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: KettleWhistle
     clip: {fileID: 8300000, guid: 27f3cd91237467d4e8726d4f78da5c22, type: 3}
-    volume: 0.184
+    volume: 0.702
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CatFreeze
     clip: {fileID: 8300000, guid: 3a5ee07c21f94794e9f3cae9b4d55099, type: 3}
-    volume: 0.43
+    volume: 0.702
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CatPop
     clip: {fileID: 8300000, guid: 4786980d729193f42a5ff39e8d7a5a30, type: 3}
-    volume: 0.622
+    volume: 0.702
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gameover
+    clip: {fileID: 8300000, guid: 3ce3c81e27935494ca55c09e34741394, type: 3}
+    volume: 0.702
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: RustleIn
     clip: {fileID: 8300000, guid: 97c051bdaf0437a4bb4ca352bb4c5d6a, type: 3}
-    volume: 0.72
+    volume: 0.702
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: RustleOut
     clip: {fileID: 8300000, guid: a0e5ff95338cc28429fa09c7ae527ab9, type: 3}
-    volume: 0.715
+    volume: 0.702
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SpawnPop
+    clip: {fileID: 8300000, guid: 9ca38c41a381a124a926147adfc4be9e, type: 3}
+    volume: 0.702
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: IceFreezing
+    clip: {fileID: 8300000, guid: 19d9c9a172c8ebe449272b9c90046c8f, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StageComplete
+    clip: {fileID: 8300000, guid: 9c18b0e03b54d074db087276927e2db9, type: 3}
+    volume: 0.613
     pitch: 1
     loop: 0
     source: {fileID: 0}
