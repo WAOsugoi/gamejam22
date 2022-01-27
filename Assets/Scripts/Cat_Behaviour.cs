@@ -14,7 +14,13 @@ public class Cat_Behaviour : MonoBehaviour
     public temp_state temperature_state_flag;
     public GameObject catbuttonprefab;
 
-    bool isActive = false;
+    [SerializeField] GameObject spawnpoint;
+    [SerializeField] GameObject stovepoint;
+    [SerializeField] GameObject exitpoint;
+
+    private bool isActive = false;
+    private bool toMoveFromSpawn = false;
+    private bool toExit = false;
 
     private AudioManager am;
 
@@ -96,8 +102,9 @@ public class Cat_Behaviour : MonoBehaviour
             Debug.Log("left mouse clicked");
             DrawListText();
             }
-
         }
+
+        //CHECK IF OBJECT IS MOVING OR 
 
     }
 
