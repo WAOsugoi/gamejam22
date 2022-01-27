@@ -57,7 +57,10 @@ public class StoveController : MonoBehaviour
                 else
                     animation.GetComponent<AscendOrDescend>().PlayAnimation(false);
                 Destroy(cat);
-                isSpawnable = true;
+                if (logic.GetComponent<GameLogicManager>().AllowedToSpawn())
+                {
+                    isSpawnable = true;
+                }
             }
 
             if (switchIsOn)

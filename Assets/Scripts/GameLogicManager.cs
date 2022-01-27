@@ -108,7 +108,7 @@ public class GameLogicManager : MonoBehaviour
     //Check if there are still cats left to be judged, if have decrease the cat count and return true to spawn cat.
     public bool AllowedToSpawn()
     {
-        if (currentNumberOfCatsToBeJudged > 0)
+        if (currentNumberOfCatsToBeJudged > 0 && !endConMet)
         {
             //currentNumberOfCatsToBeJudged -= 1;
             return true;
