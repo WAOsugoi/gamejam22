@@ -59,6 +59,7 @@ public class SinList_UI : MonoBehaviour
 
     public void pullOutList()
     {
+       Debug.Log("triggered");
         isOut = (!isOut);
         if (isOut)
         {
