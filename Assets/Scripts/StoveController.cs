@@ -51,7 +51,8 @@ public class StoveController : MonoBehaviour
             {
 
                 GameObject animation = Instantiate(finishAnimation) as GameObject;
-                animation.transform.position = cat.transform.position;
+                //animation.transform.position = cat.transform.position;
+                animation.transform.position = new Vector3(cat.transform.position.x, cat.transform.position.y, -5);
                 if (cat.GetComponent<Cat_Behaviour>().temperature_state_flag == Cat_Behaviour.temp_state.boiling)
                     animation.GetComponent<AscendOrDescend>().PlayAnimation(true);
                 else
@@ -132,5 +133,5 @@ public class StoveController : MonoBehaviour
         //Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
     }
 
-
+   
 }
