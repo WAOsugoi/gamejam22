@@ -76,11 +76,12 @@ public class StoveController : MonoBehaviour
     {
         if (switchIsOn)
         {
-            am.Play("SwitchFail");
+            am.PlayOneShot("SwitchFail");
+
         }
         else
         {
-            am.Play("SwitchFire");
+            am.PlayOneShot("SwitchFire");
             am.Play("FireLoop");
         }
 
@@ -97,11 +98,11 @@ public class StoveController : MonoBehaviour
     {
         if (!switchIsOn)
         {
-            am.Play("SwitchFail");
+            am.PlayOneShot("SwitchFail");
         }
         else
         {
-            am.Play("SwitchFire");
+            am.PlayOneShot("SwitchFire");
             am.Stop("FireLoop");
         }
 
@@ -133,5 +134,5 @@ public class StoveController : MonoBehaviour
         //Debug.Log("Temperature is: " + cat.GetComponent<Cat_Behaviour>().temperature);
     }
 
-   
+
 }

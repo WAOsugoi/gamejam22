@@ -12,8 +12,6 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
-    private GameObject glm;
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -51,22 +49,9 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        glm = GameObject.Find("GameLogicManager");
         Play("Menu");
     }
 
-    private void Update()
-    {
-        if (glm.GetComponent<GameLogicManager>().endConMet && glm.GetComponent<GameLogicManager>().isWin)
-        {
-            PlayOneShot("StageComplete");
-        }
-        if (glm.GetComponent<GameLogicManager>().endConMet && !glm.GetComponent<GameLogicManager>().isWin)
-        {
-            PlayOneShot("Gameover");
-        }
-
-    }
 
     public void Play(string name)
     {
@@ -81,7 +66,7 @@ public class AudioManager : MonoBehaviour
     public void PlayOneShot(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null || s.source.isPlaying)
+        if (s == null)
         {
             return;
         }
@@ -121,7 +106,7 @@ public class AudioManager : MonoBehaviour
     public void PlayNya()
     {
         Sound s = meows[UnityEngine.Random.Range(0, meows.Length)];
-        if (s == null || s.source.isPlaying)
+        if (s == null)
         {
             return;
         }

@@ -18,6 +18,8 @@ public class GameLogicManager : MonoBehaviour
     public GameObject catCounterPrefab;
     public CatCounter currCatCounter;
 
+    private AudioManager am;
+
     public int numWrongJudgement = 0;
     public int numCorrectJudgement = 0;
 
@@ -32,6 +34,8 @@ public class GameLogicManager : MonoBehaviour
         endConMet = false;
         //Debug.Log(SceneManager.GetActiveScene().buildIndex);
         //LoseEvent();
+
+        am = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -77,8 +81,10 @@ public class GameLogicManager : MonoBehaviour
                 winScreen.transform.SetParent(currentCanvas.transform, false);
             }
 
+            am.PlayOneShot("StageComplete");
+
             endConMet = true;
-            isWin = true;
+            //isWin = true;
         }
 
     }
@@ -89,8 +95,11 @@ public class GameLogicManager : MonoBehaviour
         {
             GameObject loseScreen = Instantiate(loseScreenPrefab) as GameObject;
             loseScreen.transform.SetParent(currentCanvas.transform, false);
+
+            am.PlayOneShot("Gameover");
+
             endConMet = true;
-            isWin = false;
+            //isWin = false;
         }
     }
 
